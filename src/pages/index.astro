@@ -17,7 +17,7 @@ import industrialImage from '../assets/images/industrial-image.jpg';
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between transition-all duration-700 ease-in-out" :class="scrolled ? 'h-16' : 'h-20'">
         <!-- Logo -->
-        <a href="/" class="flex-shrink-0 transition-all duration-700 ease-in-out">
+        <a href="/" class="flex-shrink-0 transition-all duration-700 ease-in-out drop-shadow-md hover:drop-shadow-lg">
           <Image src={logoHorizontal} alt="Nazareth Law Firm" class="w-auto transition-all duration-700 ease-in-out" :class="scrolled ? 'h-8' : 'h-12'" />
         </a>
 
@@ -72,16 +72,16 @@ import industrialImage from '../assets/images/industrial-image.jpg';
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
       <div class="max-w-5xl mx-auto">
         <!-- Accent bar with corner accent -->
-        <div class="mb-8" x-data x-intersect="$el.classList.add('animate')">
-          <div class="h-1 w-24 bg-gradient-to-r from-primary-400 via-primary-300 to-transparent"></div>
+        <div class="mb-8 slide-in" x-data x-intersect="$el.classList.add('animate')">
+          <div class="h-1 w-24 bg-linear-to-r from-primary-400 via-primary-300 to-transparent"></div>
         </div>
 
-        <h1 class="text-white mb-8 leading-tight max-w-4xl stagger-1" x-data x-intersect="$el.classList.add('animate')">
-          Representing Victims of Major Industrial Disasters
+        <h1 class="text-white mb-2 leading-tight max-w-4xl font-bold tracking-widest stagger-1" x-data x-intersect="$el.classList.add('animate')">
+          NEIL NAZARETH
         </h1>
 
         <p class="text-xl sm:text-2xl text-white/90 mb-16 max-w-3xl leading-relaxed stagger-2" x-data x-intersect="$el.classList.add('animate')">
-          Expert legal representation for asbestos exposure, maritime incidents, and environmental catastrophes
+          Help for Victims of Major Industrial Disasters and Environmental Exposures
         </p>
 
         <!-- Stats with sophisticated corner accents -->
@@ -90,7 +90,7 @@ import industrialImage from '../assets/images/industrial-image.jpg';
             <div class="text-5xl font-light text-white mb-3 tracking-tight">$50M+</div>
             <div class="text-sm text-gray-300 font-medium uppercase tracking-wider">Single Case Recoveries</div>
           </CornerAccentCard>
-          <CornerAccentCard accentColor="primary" class="bg-white/5 backdrop-blur-md rounded-none p-8 border border-white/30 hover-lift hover:bg-white/10 hover:border-primary-400/50 transition-all duration-500">
+          <CornerAccentCard accentColor="secondary" class="bg-white/5 backdrop-blur-md rounded-none p-8 border border-white/30 hover-lift hover:bg-white/10 hover:border-secondary-400/50 transition-all duration-500">
             <div class="text-5xl font-light text-white mb-3 tracking-tight">150+</div>
             <div class="text-sm text-gray-300 font-medium uppercase tracking-wider">Cases Won</div>
           </CornerAccentCard>
@@ -101,13 +101,10 @@ import industrialImage from '../assets/images/industrial-image.jpg';
         </div>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div class="flex items-center justify-center">
           <Button href="#contact" variant="primary" size="lg" class="w-full sm:w-auto">
             <FileText class="w-5 h-5" />
             Free Consultation
-          </Button>
-          <Button href="#about" variant="outline" size="lg" class="w-full sm:w-auto">
-            Learn More
           </Button>
         </div>
       </div>
@@ -131,7 +128,7 @@ import industrialImage from '../assets/images/industrial-image.jpg';
       <div class="grid lg:grid-cols-2 gap-20 items-center">
         <!-- Left: Content -->
         <div>
-          <div class="inline-block mb-6" x-data x-intersect="$el.classList.add('animate')">
+          <div class="inline-block mb-6 slide-in" x-data x-intersect="$el.classList.add('animate')">
             <div class="h-1 w-24 bg-gradient-to-r from-primary-500 via-primary-400 to-transparent"></div>
           </div>
 
@@ -198,7 +195,7 @@ import industrialImage from '../assets/images/industrial-image.jpg';
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-20">
-        <div class="inline-block mb-6" x-data x-intersect="$el.classList.add('animate')">
+        <div class="inline-block mb-6 slide-in" x-data x-intersect="$el.classList.add('animate')">
           <div class="h-1 w-24 bg-gradient-to-r from-primary-500 via-primary-400 to-transparent mx-auto"></div>
         </div>
 
@@ -252,7 +249,7 @@ import industrialImage from '../assets/images/industrial-image.jpg';
         <a href="/practice-areas/personal-injury" class="group bg-white rounded-none p-8 border border-gray-200 hover:border-secondary-500 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary-500/20 hover:-translate-y-2 block relative overflow-hidden stagger-2" x-data x-intersect="$el.classList.add('animate')">
           <div class="absolute inset-0 bg-gradient-to-br from-secondary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="relative z-10">
-            <div class="w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+            <div class="gold-shine-card w-16 h-16 bg-gradient-to-br from-secondary-300 to-secondary-500 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
               <Heart class="w-8 h-8 text-white" />
             </div>
             <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-secondary-600 transition-colors duration-300">
@@ -300,7 +297,7 @@ import industrialImage from '../assets/images/industrial-image.jpg';
         <a href="/practice-areas/hurricane-claims" class="group bg-white rounded-none p-8 border border-gray-200 hover:border-secondary-500 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary-500/20 hover:-translate-y-2 block relative overflow-hidden" x-data x-intersect="$el.classList.add('animate')">
           <div class="absolute inset-0 bg-gradient-to-br from-secondary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           <div class="relative z-10">
-            <div class="w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-600 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+            <div class="gold-shine-card w-16 h-16 bg-gradient-to-br from-secondary-300 to-secondary-500 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
               <CloudRain class="w-8 h-8 text-white" />
             </div>
             <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-secondary-600 transition-colors duration-300">
@@ -347,6 +344,176 @@ import industrialImage from '../assets/images/industrial-image.jpg';
     </div>
   </section>
 
+  <!-- Testimonials Section -->
+  <section class="py-32 bg-accent-900 relative overflow-hidden">
+    <!-- Gradient/Glow Background Effects -->
+    <div class="absolute top-0 left-0 w-[800px] h-[800px] bg-primary-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/3"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-500/15 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+    <div class="absolute top-1/2 left-1/2 w-[500px] h-[500px] bg-secondary-400/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center">
+        <!-- 5 Gold Stars -->
+        <div class="flex justify-center gap-3 mb-6">
+          <svg class="w-12 h-12 text-secondary-400 stagger-1" x-data x-intersect="$el.classList.add('animate')" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-12 h-12 text-secondary-400 stagger-2" x-data x-intersect="$el.classList.add('animate')" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-12 h-12 text-secondary-400 stagger-3" x-data x-intersect="$el.classList.add('animate')" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-12 h-12 text-secondary-400 stagger-4" x-data x-intersect="$el.classList.add('animate')" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-12 h-12 text-secondary-400 stagger-5" x-data x-intersect="$el.classList.add('animate')" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        </div>
+
+        <h2 class="text-white mb-2 stagger-6" x-data x-intersect="$el.classList.add('animate')">
+          Client Testimonials
+        </h2>
+      </div>
+
+      <!-- Testimonial Carousel -->
+      <div x-data="testimonialCarousel()" @mouseenter="stopAutoplay()" @mouseleave="startAutoplay()" class="relative w-full mx-auto">
+        <!-- Decorative Quote Marks -->
+        <div class="absolute -top-10 left-0 md:left-20 w-28 h-28 md:w-40 md:h-40 opacity-15 pointer-events-none z-0">
+          <svg viewBox="0 0 191.029 191.029" fill="currentColor" class="text-secondary-400">
+            <path d="M44.33,88.474v15.377h38.417v82.745H0v-82.745h0.002V88.474c0-31.225,8.984-54.411,26.704-68.918
+    C38.964,9.521,54.48,4.433,72.824,4.433v44.326C62.866,48.759,44.33,48.759,44.33,88.474z M181.107,48.759V4.433
+    c-18.343,0-33.859,5.088-46.117,15.123c-17.72,14.507-26.705,37.694-26.705,68.918v15.377h0v82.745h82.744v-82.745h-38.417V88.474
+    C152.613,48.759,171.149,48.759,181.107,48.759z"/>
+          </svg>
+        </div>
+        <div class="absolute bottom-10 right-0 md:right-20 w-28 h-28 md:w-40 md:h-40 opacity-15 pointer-events-none z-0 rotate-180">
+          <svg viewBox="0 0 191.029 191.029" fill="currentColor" class="text-secondary-400">
+            <path d="M44.33,88.474v15.377h38.417v82.745H0v-82.745h0.002V88.474c0-31.225,8.984-54.411,26.704-68.918
+    C38.964,9.521,54.48,4.433,72.824,4.433v44.326C62.866,48.759,44.33,48.759,44.33,88.474z M181.107,48.759V4.433
+    c-18.343,0-33.859,5.088-46.117,15.123c-17.72,14.507-26.705,37.694-26.705,68.918v15.377h0v82.745h82.744v-82.745h-38.417V88.474
+    C152.613,48.759,171.149,48.759,181.107,48.759z"/>
+          </svg>
+        </div>
+
+        <!-- Testimonial Card -->
+        <div class="h-[500px] md:h-[400px] flex items-center justify-center px-4 md:px-16 lg:px-32 py-12">
+          <div class="w-full relative z-10"
+               x-show="!isTransitioning"
+               x-transition:enter="transition ease-out duration-500"
+               x-transition:enter-start="opacity-0"
+               x-transition:enter-end="opacity-100"
+               x-transition:leave="transition ease-out duration-500"
+               x-transition:leave-start="opacity-100"
+               x-transition:leave-end="opacity-0">
+
+            <figure class="wp-block-pullquote">
+              <!-- Quote -->
+              <blockquote class="text-white text-2xl md:text-3xl lg:text-4xl font-light text-center mb-12" x-text="testimonials[activeSlide].quote"></blockquote>
+
+              <!-- Attribution -->
+              <cite class="not-italic block text-center">
+                <p class="text-secondary-300 font-semibold text-xl md:text-2xl mb-2" x-text="'– ' + testimonials[activeSlide].name"></p>
+                <p class="text-white/70 text-base md:text-lg uppercase tracking-wider font-light" x-text="testimonials[activeSlide].case"></p>
+              </cite>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button @click="prev()" class="absolute left-4 md:left-0 top-1/2 -translate-y-1/2 md:-translate-x-16 w-12 h-12 bg-secondary-500 hover:bg-secondary-400 text-white rounded-none transition-all duration-300 flex items-center justify-center hover:scale-110 shadow-xl z-20">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+          </svg>
+        </button>
+        <button @click="next()" class="absolute right-4 md:right-0 top-1/2 -translate-y-1/2 md:translate-x-16 w-12 h-12 bg-secondary-500 hover:bg-secondary-400 text-white rounded-none transition-all duration-300 flex items-center justify-center hover:scale-110 shadow-xl z-20">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    function testimonialCarousel() {
+      return {
+        activeSlide: 0,
+        autoplayInterval: null,
+        isTransitioning: false,
+        testimonials: [
+          {
+            quote: "After my mesothelioma diagnosis, I didn't know where to turn. Mr. Nazareth and his team fought tirelessly for my family. They secured a $47 million settlement that will care for us for years to come. Their expertise in asbestos litigation is unmatched.",
+            name: "Robert M.",
+            case: "Mesothelioma - Shipyard Exposure"
+          },
+          {
+            quote: "Following the refinery explosion, I suffered severe injuries that left me unable to work. The Nazareth Law Firm handled everything with such professionalism and compassion. They recovered $12.5 million for my medical bills and lost wages. I can't thank them enough.",
+            name: "Maria S.",
+            case: "Industrial Accident - Chemical Plant"
+          },
+          {
+            quote: "When Hurricane Ida destroyed our family business, insurance tried to deny our claim. Mr. Nazareth's team fought back and won us $8.3 million. They turned our worst nightmare into a chance to rebuild stronger than ever.",
+            name: "James & Patricia L.",
+            case: "Hurricane Property Damage"
+          },
+          {
+            quote: "My husband was killed in an offshore platform accident. During the darkest time of our lives, this firm provided both legal excellence and genuine care. The $23 million settlement they secured ensures our children's future is protected.",
+            name: "Jennifer K.",
+            case: "Maritime Wrongful Death"
+          },
+          {
+            quote: "The slip and fall at the grocery store left me with permanent back injuries. Mr. Nazareth's team investigated thoroughly and discovered the store's negligence went back months. The $6.8 million verdict gives me financial security for a lifetime of medical care.",
+            name: "David T.",
+            case: "Premises Liability - Retail Accident"
+          },
+          {
+            quote: "After the industrial explosion at the warehouse, I lost my leg and my ability to provide for my family. This firm fought the corporation's lawyers and won us $15.2 million. They gave us hope when we had none.",
+            name: "Carlos R.",
+            case: "Catastrophic Workplace Injury"
+          },
+          {
+            quote: "The defective medical device caused me years of pain before we discovered the manufacturer knew about the risks. Mr. Nazareth took on the billion-dollar company and secured a $9.5 million settlement. His dedication to justice is extraordinary.",
+            name: "Susan W.",
+            case: "Product Liability - Medical Device"
+          }
+        ],
+        init() {
+          this.startAutoplay();
+        },
+        startAutoplay() {
+          this.autoplayInterval = setInterval(() => {
+            this.next();
+          }, 8000);
+        },
+        stopAutoplay() {
+          if (this.autoplayInterval) {
+            clearInterval(this.autoplayInterval);
+            this.autoplayInterval = null;
+          }
+        },
+        getCurrentTestimonial() {
+          return this.testimonials[this.activeSlide];
+        },
+        next() {
+          this.isTransitioning = true;
+          setTimeout(() => {
+            this.activeSlide = (this.activeSlide + 1) % this.testimonials.length;
+            this.isTransitioning = false;
+          }, 500);
+        },
+        prev() {
+          this.isTransitioning = true;
+          setTimeout(() => {
+            this.activeSlide = this.activeSlide === 0 ? this.testimonials.length - 1 : this.activeSlide - 1;
+            this.isTransitioning = false;
+          }, 500);
+        }
+      }
+    }
+  </script>
+
   <!-- Contact CTA Section -->
   <section id="contact" class="py-40 bg-gray-50 relative overflow-hidden bg-pattern-grid gradient-overlay-subtle">
     <!-- Decorative elements -->
@@ -359,7 +526,7 @@ import industrialImage from '../assets/images/industrial-image.jpg';
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-20">
-        <div class="inline-block mb-6" x-data x-intersect="$el.classList.add('animate')">
+        <div class="inline-block mb-6 slide-in" x-data x-intersect="$el.classList.add('animate')">
           <div class="h-1 w-24 bg-gradient-to-r from-primary-500 via-primary-400 to-transparent mx-auto"></div>
         </div>
         <h2 class="text-gray-900 mb-8 stagger-1" x-data x-intersect="$el.classList.add('animate')">

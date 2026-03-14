@@ -5,7 +5,11 @@ import alpinejs from '@astrojs/alpinejs';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [alpinejs()],
+  integrations: [
+    alpinejs({
+      entrypoint: './src/alpine-config.js'
+    })
+  ],
   vite: {
     plugins: [tailwindcss()]
   }

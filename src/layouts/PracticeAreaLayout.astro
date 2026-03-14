@@ -25,13 +25,16 @@ const { title, description, heroImage } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Nazareth Law Firm</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body>
     <!-- Navigation -->
     <nav x-data="{ mobileMenuOpen: false }" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-20">
-          <a href="/" class="flex-shrink-0">
+          <a href="/" class="flex-shrink-0 drop-shadow-md hover:drop-shadow-lg transition-all duration-300">
             <Image src={logoHorizontal} alt="Nazareth Law Firm" class="h-12 w-auto" />
           </a>
 

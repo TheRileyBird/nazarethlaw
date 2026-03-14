@@ -15,7 +15,12 @@
       "Bash(npm uninstall:*)",
       "Bash(curl:*)",
       "Bash(ls:*)",
-      "WebFetch(domain:kwlaw.com)"
+      "WebFetch(domain:kwlaw.com)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run build:*)",
+      "Bash(pkill:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)"
     ]
   }
 }
