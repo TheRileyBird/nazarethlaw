@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Button from '../components/Button.astro';
 import { Image } from 'astro:assets';
 import { Menu, X, Phone, Mail } from '@lucide/astro';
 import logoHorizontal from '../assets/images/logo-horizontal.png';
@@ -38,10 +39,10 @@ const { title, description, heroImage } = Astro.props;
             <a href="/#practice-areas" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Practice Areas</a>
             <a href="/#about" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">About</a>
             <a href="/#contact" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
-            <a href="tel:+15044082284" class="inline-flex items-center gap-2 bg-accent-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-600 transition-all shadow-lg shadow-accent-500/20">
+            <Button href="tel:+15044082284" variant="secondary" size="md">
               <Phone class="w-4 h-4" />
               504-408-2284
-            </a>
+            </Button>
           </div>
 
           <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
@@ -52,13 +53,13 @@ const { title, description, heroImage } = Astro.props;
 
         <div x-show="mobileMenuOpen" x-cloak class="md:hidden py-4 border-t border-gray-100">
           <div class="flex flex-col space-y-3">
-            <a href="/#practice-areas" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors">Practice Areas</a>
-            <a href="/#about" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors">About</a>
-            <a href="/#contact" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors">Contact</a>
-            <a href="tel:+15044082284" class="inline-flex items-center justify-center gap-2 bg-accent-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-600 transition-colors">
+            <a href="/#practice-areas" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors">Practice Areas</a>
+            <a href="/#about" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors">About</a>
+            <a href="/#contact" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors">Contact</a>
+            <Button href="tel:+15044082284" variant="secondary" size="md" class="w-full">
               <Phone class="w-4 h-4" />
               504-408-2284
-            </a>
+            </Button>
           </div>
         </div>
       </div>
@@ -82,13 +83,13 @@ const { title, description, heroImage } = Astro.props;
       )}
 
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="inline-block mb-4">
-          <div class="h-1 w-24 bg-gradient-to-r from-primary-400 to-secondary-400 rounded-full"></div>
+        <div class="inline-block mb-6" x-data x-intersect="$el.classList.add('animate')">
+          <div class="h-1 w-24 bg-gradient-to-r from-primary-400 via-primary-300 to-transparent"></div>
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4" >
+        <h1 class="text-white mb-6 stagger-1" x-data x-intersect="$el.classList.add('animate')">
           {title}
         </h1>
-        <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+        <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed stagger-2" x-data x-intersect="$el.classList.add('animate')">
           {description}
         </p>
       </div>
@@ -100,46 +101,46 @@ const { title, description, heroImage } = Astro.props;
     </main>
 
     <!-- Footer -->
-    <footer class="bg-accent-500 text-white py-12">
+    <footer class="bg-accent-500 text-white py-20 border-t-4 border-primary-500">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-3 gap-12 mb-8">
+        <div class="grid md:grid-cols-3 gap-16 mb-12">
           <div>
-            <Image src={logo} alt="Nazareth Law Firm" class="h-20 w-auto mb-4 brightness-0 invert" />
-            <p class="text-white/80 leading-relaxed">
+            <Image src={logo} alt="Nazareth Law Firm" class="h-24 w-auto mb-6 brightness-0 invert" />
+            <p class="text-white/70 leading-relaxed text-base">
               Expert legal representation for victims of major industrial disasters and environmental exposures.
             </p>
           </div>
 
           <div>
-            <h3 class="text-lg font-bold mb-4 text-white" >Quick Links</h3>
-            <ul class="space-y-2">
-              <li><a href="/#practice-areas" class="text-white/80 hover:text-primary-400 transition-colors">Practice Areas</a></li>
-              <li><a href="/#about" class="text-white/80 hover:text-primary-400 transition-colors">About</a></li>
-              <li><a href="/#contact" class="text-white/80 hover:text-primary-400 transition-colors">Contact</a></li>
+            <h3 class="text-sm font-bold mb-6 text-white uppercase tracking-widest">Quick Links</h3>
+            <ul class="space-y-3">
+              <li><a href="/#practice-areas" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Practice Areas</a></li>
+              <li><a href="/#about" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">About</a></li>
+              <li><a href="/#contact" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Contact</a></li>
             </ul>
           </div>
 
           <div>
-            <h3 class="text-lg font-bold mb-4 text-white" >Contact</h3>
-            <ul class="space-y-3 text-white/80">
-              <li class="flex items-start gap-2">
-                <Phone class="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <a href="tel:+15044082284" class="hover:text-primary-400 transition-colors">504-408-2284</a>
+            <h3 class="text-sm font-bold mb-6 text-white uppercase tracking-widest">Contact</h3>
+            <ul class="space-y-4 text-white/70">
+              <li class="flex items-start gap-3">
+                <Phone class="w-5 h-5 mt-1 flex-shrink-0 text-primary-400" />
+                <a href="tel:+15044082284" class="hover:text-primary-400 transition-colors duration-300 text-base">504-408-2284</a>
               </li>
-              <li class="flex items-start gap-2">
-                <Mail class="w-5 h-5 mt-0.5 flex-shrink-0" />
-                <span>info@nazarethlawfirm.com</span>
+              <li class="flex items-start gap-3">
+                <Mail class="w-5 h-5 mt-1 flex-shrink-0 text-primary-400" />
+                <span class="text-base">info@nazarethlawfirm.com</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="border-t border-white/20 pt-8">
-          <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/60">
-            <p>&copy; {new Date().getFullYear()} Nazareth Law Firm. All rights reserved.</p>
-            <div class="flex gap-6">
-              <a href="#" class="hover:text-primary-400 transition-colors">Privacy Policy</a>
-              <a href="#" class="hover:text-primary-400 transition-colors">Terms of Service</a>
+        <div class="border-t border-white/10 pt-10">
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-white/50">
+            <p class="text-sm">&copy; {new Date().getFullYear()} Nazareth Law Firm. All rights reserved.</p>
+            <div class="flex gap-8">
+              <a href="#" class="hover:text-primary-400 transition-colors duration-300 text-sm">Privacy Policy</a>
+              <a href="#" class="hover:text-primary-400 transition-colors duration-300 text-sm">Terms of Service</a>
             </div>
           </div>
         </div>

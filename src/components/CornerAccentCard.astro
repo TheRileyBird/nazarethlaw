@@ -1,0 +1,74 @@
+---
+interface Props {
+  class?: string;
+  accentColor?: 'primary' | 'secondary' | 'accent';
+}
+
+const { class: className = '', accentColor = 'primary' } = Astro.props;
+---
+
+<div class={`corner-accent-card ${className}`} data-accent={accentColor}>
+  <slot />
+</div>
+
+<style>
+  .corner-accent-card {
+    position: relative;
+    transition: all 0.5s ease-out;
+  }
+
+  .corner-accent-card::before,
+  .corner-accent-card::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-width: 0;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+  }
+
+  .corner-accent-card::before {
+    top: -10px;
+    left: -10px;
+    border-top-width: 3px;
+    border-left-width: 3px;
+    transform: translate(-20px, -20px);
+  }
+
+  .corner-accent-card::after {
+    bottom: -10px;
+    right: -10px;
+    border-bottom-width: 3px;
+    border-right-width: 3px;
+    transform: translate(20px, 20px);
+  }
+
+  /* Color variants */
+  .corner-accent-card[data-accent="primary"]::before,
+  .corner-accent-card[data-accent="primary"]::after {
+    border-color: rgb(0, 159, 183);
+  }
+
+  .corner-accent-card[data-accent="secondary"]::before,
+  .corner-accent-card[data-accent="secondary"]::after {
+    border-color: rgb(235, 81, 96);
+  }
+
+  .corner-accent-card[data-accent="accent"]::before,
+  .corner-accent-card[data-accent="accent"]::after {
+    border-color: rgb(2, 8, 75);
+  }
+
+  /* Hover animations - corners slide in smoothly */
+  .corner-accent-card:hover::before {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+  .corner-accent-card:hover::after {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+</style>

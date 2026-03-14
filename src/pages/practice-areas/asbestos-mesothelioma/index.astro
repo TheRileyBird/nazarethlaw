@@ -1,5 +1,6 @@
 ---
 import PracticeAreaLayout from '../../../layouts/PracticeAreaLayout.astro';
+import Button from '../../../components/Button.astro';
 import { FileText, CheckCircle2, Scale } from '@lucide/astro';
 import heroBanner from '../../../assets/images/hero-banner.jpg';
 ---
@@ -26,42 +27,42 @@ import heroBanner from '../../../assets/images/hero-banner.jpg';
         <h3 class="text-2xl font-bold text-gray-900 mb-4" >Types of Cases We Handle</h3>
 
         <div class="grid md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+          <div class="bg-gray-50 p-8 rounded-none border-l-4 border-primary-500 hover:bg-white transition-colors duration-300">
             <div class="flex items-start gap-3">
               <CheckCircle2 class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
               <div>
                 <h4 class="font-semibold text-gray-900 mb-2">Workplace Exposure</h4>
-                <p class="text-sm text-gray-600">Industrial workers, construction employees, and maritime personnel exposed to asbestos on the job</p>
+                <p class="text-base text-gray-600 leading-relaxed">Industrial workers, construction employees, and maritime personnel exposed to asbestos on the job</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+          <div class="bg-gray-50 p-8 rounded-none border-l-4 border-primary-500 hover:bg-white transition-colors duration-300">
             <div class="flex items-start gap-3">
               <CheckCircle2 class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
               <div>
                 <h4 class="font-semibold text-gray-900 mb-2">Mesothelioma</h4>
-                <p class="text-sm text-gray-600">Aggressive cancer caused by asbestos exposure affecting lung lining and other organs</p>
+                <p class="text-base text-gray-600 leading-relaxed">Aggressive cancer caused by asbestos exposure affecting lung lining and other organs</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+          <div class="bg-gray-50 p-8 rounded-none border-l-4 border-secondary-500 hover:bg-white transition-colors duration-300">
             <div class="flex items-start gap-3">
               <CheckCircle2 class="w-6 h-6 text-secondary-600 flex-shrink-0 mt-1" />
               <div>
                 <h4 class="font-semibold text-gray-900 mb-2">Product Liability</h4>
-                <p class="text-sm text-gray-600">Cases involving defective asbestos-containing products and inadequate safety warnings</p>
+                <p class="text-base text-gray-600 leading-relaxed">Cases involving defective asbestos-containing products and inadequate safety warnings</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+          <div class="bg-gray-50 p-8 rounded-none border-l-4 border-secondary-500 hover:bg-white transition-colors duration-300">
             <div class="flex items-start gap-3">
               <CheckCircle2 class="w-6 h-6 text-secondary-600 flex-shrink-0 mt-1" />
               <div>
                 <h4 class="font-semibold text-gray-900 mb-2">Wrongful Death</h4>
-                <p class="text-sm text-gray-600">Representing families who have lost loved ones to asbestos-related diseases</p>
+                <p class="text-base text-gray-600 leading-relaxed">Representing families who have lost loved ones to asbestos-related diseases</p>
               </div>
             </div>
           </div>
@@ -100,10 +101,10 @@ import heroBanner from '../../../assets/images/hero-banner.jpg';
       <p class="text-xl text-gray-200 mb-8">
         Time is critical in asbestos cases. Contact us today for a confidential consultation.
       </p>
-      <a href="/#contact" class="inline-flex items-center gap-2 bg-secondary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary-600 transition-all shadow-2xl shadow-secondary-500/30">
+      <Button href="/#contact" variant="primary" size="lg">
         <FileText class="w-5 h-5" />
         Request Free Consultation
-      </a>
+      </Button>
     </div>
   </section>
 </PracticeAreaLayout>
