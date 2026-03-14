@@ -1,0 +1,87 @@
+---
+import PracticeAreaLayout from '../../../layouts/PracticeAreaLayout.astro';
+import { FileText, CheckCircle2, Briefcase } from '@lucide/astro';
+import heroBanner from '../../../assets/images/hero-banner.jpg';
+---
+
+<PracticeAreaLayout
+  title="Business Interruption Claims"
+  description="Recovering lost revenue and expenses when disaster disrupts your business"
+  heroImage={heroBanner}
+>
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6" >Business Interruption Insurance Claims</h2>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+          When unexpected events force your business to shut down or reduce operations, business interruption insurance should cover your financial losses. Nazareth Law Firm helps businesses recover compensation for lost revenue, ongoing expenses, and other covered losses.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed mb-8">
+          Insurance companies often dispute business interruption claims or undervalue losses. We work with financial experts to accurately calculate your losses and fight for the full compensation your policy provides.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >Covered Events</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <CheckCircle2 class="w-6 h-6 text-primary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Natural Disasters</h4>
+            <p class="text-sm text-gray-600">Hurricanes, floods, fires, and severe weather events</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <CheckCircle2 class="w-6 h-6 text-primary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Equipment Failure</h4>
+            <p class="text-sm text-gray-600">Critical machinery breakdowns affecting operations</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <CheckCircle2 class="w-6 h-6 text-secondary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Supply Chain Disruption</h4>
+            <p class="text-sm text-gray-600">Supplier or distributor shutdowns impacting your business</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <CheckCircle2 class="w-6 h-6 text-secondary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Utility Outages</h4>
+            <p class="text-sm text-gray-600">Extended power, water, or utility service interruptions</p>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >Recoverable Losses</h3>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <Briefcase class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Lost revenue and profits during shutdown period</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Briefcase class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Continuing operating expenses (rent, utilities, payroll)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Briefcase class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Extra expenses to minimize business losses</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Briefcase class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Employee wages and benefits during closure</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-br from-accent-900 via-accent-800 to-accent-700">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4" >Protect Your Business Recovery</h2>
+      <p class="text-xl text-gray-200 mb-8">Don't let your business suffer financially. We'll maximize your claim.</p>
+      <a href="/#contact" class="inline-flex items-center gap-2 bg-secondary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary-600 transition-all shadow-2xl shadow-secondary-500/30">
+        <FileText class="w-5 h-5" />
+        Request Free Consultation
+      </a>
+    </div>
+  </section>
+</PracticeAreaLayout>

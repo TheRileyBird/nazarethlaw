@@ -1,0 +1,107 @@
+---
+import PracticeAreaLayout from '../../../layouts/PracticeAreaLayout.astro';
+import { FileText, CheckCircle2, Heart } from '@lucide/astro';
+import heroBanner from '../../../assets/images/hero-banner.jpg';
+---
+
+<PracticeAreaLayout
+  title="Personal Injury"
+  description="Comprehensive legal representation for victims of accidents and negligence"
+  heroImage={heroBanner}
+>
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6" >Fighting for Injury Victims</h2>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+          When you suffer harm due to another party's negligence or misconduct, you deserve full compensation for your injuries. Nazareth Law Firm handles all types of personal injury cases, from car accidents to medical malpractice, pursuing maximum recovery for our clients.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed mb-8">
+          We understand that serious injuries affect every aspect of your life—physically, emotionally, and financially. Our firm works tirelessly to hold negligent parties accountable and secure the resources you need for recovery and rehabilitation.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >Types of Personal Injury Cases</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Car Accidents</h4>
+                <p class="text-sm text-gray-600">Representing victims of negligent driving, drunk driving, and distracted driving crashes</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Slip and Fall</h4>
+                <p class="text-sm text-gray-600">Injuries caused by dangerous property conditions and inadequate maintenance</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-secondary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Medical Malpractice</h4>
+                <p class="text-sm text-gray-600">Cases involving doctor errors, surgical mistakes, and misdiagnosis</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-secondary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Workplace Injuries</h4>
+                <p class="text-sm text-gray-600">Accidents on job sites, construction injuries, and industrial accidents</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >Compensation You May Recover</h3>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <Heart class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Medical expenses (past and future treatment costs)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Heart class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Lost wages and diminished earning capacity</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Heart class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Pain and suffering</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Heart class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Property damage and rehabilitation costs</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-br from-accent-900 via-accent-800 to-accent-700">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4" >
+        Don't Face Insurance Companies Alone
+      </h2>
+      <p class="text-xl text-gray-200 mb-8">
+        We fight for full and fair compensation. Contact us for a free consultation.
+      </p>
+      <a href="/#contact" class="inline-flex items-center gap-2 bg-secondary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary-600 transition-all shadow-2xl shadow-secondary-500/30">
+        <FileText class="w-5 h-5" />
+        Request Free Consultation
+      </a>
+    </div>
+  </section>
+</PracticeAreaLayout>

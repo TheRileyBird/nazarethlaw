@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #02084b;
+  --color-teal: #009fb7;
+  --color-coral: #eb5160;
+  --color-light-bg: #f9f9f9;
+
+  --color-primary-50: #e6f7fa;
+  --color-primary-100: #b3e8f0;
+  --color-primary-200: #80d9e6;
+  --color-primary-300: #4dcadc;
+  --color-primary-400: #1abbd2;
+  --color-primary-500: #009fb7;
+  --color-primary-600: #007f92;
+  --color-primary-700: #005f6e;
+  --color-primary-800: #004049;
+  --color-primary-900: #002025;
+
+  --color-secondary-50: #fce8ea;
+  --color-secondary-100: #f7bdc3;
+  --color-secondary-200: #f2929c;
+  --color-secondary-300: #ed6775;
+  --color-secondary-400: #e93c4e;
+  --color-secondary-500: #eb5160;
+  --color-secondary-600: #bc414d;
+  --color-secondary-700: #8d313a;
+  --color-secondary-800: #5e2026;
+  --color-secondary-900: #2f1013;
+
+  --color-accent-50: #e6e7ef;
+  --color-accent-100: #b3b6d1;
+  --color-accent-200: #8085b3;
+  --color-accent-300: #4d5495;
+  --color-accent-400: #1a2377;
+  --color-accent-500: #02084b;
+  --color-accent-600: #02063c;
+  --color-accent-700: #01052d;
+  --color-accent-800: #01031e;
+  --color-accent-900: #00020f;
+}
+
+/* Alpine.js cloak */
+[x-cloak] {
+  display: none !important;
+}
+
+/* Base typography - Inter only */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 700;
+}

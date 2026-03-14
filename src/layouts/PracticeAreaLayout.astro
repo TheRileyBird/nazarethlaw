@@ -1,0 +1,149 @@
+---
+import '../styles/global.css';
+import { Image } from 'astro:assets';
+import { Menu, X, Phone, Mail } from '@lucide/astro';
+import logoHorizontal from '../assets/images/logo-horizontal.png';
+import logo from '../assets/images/logo.png';
+
+interface Props {
+  title: string;
+  description: string;
+  heroImage?: any;
+}
+
+const { title, description, heroImage } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | Nazareth Law Firm</title>
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav x-data="{ mobileMenuOpen: false }" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a href="/" class="flex-shrink-0">
+            <Image src={logoHorizontal} alt="Nazareth Law Firm" class="h-12 w-auto" />
+          </a>
+
+          <div class="hidden md:flex items-center space-x-8" >
+            <a href="/#practice-areas" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Practice Areas</a>
+            <a href="/#about" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">About</a>
+            <a href="/#contact" class="text-gray-700 hover:text-primary-600 font-medium transition-colors">Contact</a>
+            <a href="tel:+15044082284" class="inline-flex items-center gap-2 bg-accent-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-600 transition-all shadow-lg shadow-accent-500/20">
+              <Phone class="w-4 h-4" />
+              504-408-2284
+            </a>
+          </div>
+
+          <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+            <Menu x-show="!mobileMenuOpen" class="w-6 h-6 text-gray-700" />
+            <X x-show="mobileMenuOpen" x-cloak class="w-6 h-6 text-gray-700" />
+          </button>
+        </div>
+
+        <div x-show="mobileMenuOpen" x-cloak class="md:hidden py-4 border-t border-gray-100">
+          <div class="flex flex-col space-y-3">
+            <a href="/#practice-areas" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors">Practice Areas</a>
+            <a href="/#about" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors">About</a>
+            <a href="/#contact" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 rounded-lg hover:bg-gray-50 transition-colors">Contact</a>
+            <a href="tel:+15044082284" class="inline-flex items-center justify-center gap-2 bg-accent-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-600 transition-colors">
+              <Phone class="w-4 h-4" />
+              504-408-2284
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center overflow-hidden pt-20">
+      {heroImage && (
+        <div class="absolute inset-0">
+          <Image
+            src={heroImage}
+            alt={title}
+            class="w-full h-full object-cover object-center"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-br from-accent-900/90 via-accent-800/85 to-accent-700/80"></div>
+        </div>
+      )}
+      {!heroImage && (
+        <div class="absolute inset-0 bg-gradient-to-br from-accent-900 via-accent-800 to-accent-700"></div>
+      )}
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="inline-block mb-4">
+          <div class="h-1 w-24 bg-gradient-to-r from-primary-400 to-secondary-400 rounded-full"></div>
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4" >
+          {title}
+        </h1>
+        <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+          {description}
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-accent-500 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-12 mb-8">
+          <div>
+            <Image src={logo} alt="Nazareth Law Firm" class="h-20 w-auto mb-4 brightness-0 invert" />
+            <p class="text-white/80 leading-relaxed">
+              Expert legal representation for victims of major industrial disasters and environmental exposures.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4 text-white" >Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="/#practice-areas" class="text-white/80 hover:text-primary-400 transition-colors">Practice Areas</a></li>
+              <li><a href="/#about" class="text-white/80 hover:text-primary-400 transition-colors">About</a></li>
+              <li><a href="/#contact" class="text-white/80 hover:text-primary-400 transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4 text-white" >Contact</h3>
+            <ul class="space-y-3 text-white/80">
+              <li class="flex items-start gap-2">
+                <Phone class="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <a href="tel:+15044082284" class="hover:text-primary-400 transition-colors">504-408-2284</a>
+              </li>
+              <li class="flex items-start gap-2">
+                <Mail class="w-5 h-5 mt-0.5 flex-shrink-0" />
+                <span>info@nazarethlawfirm.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-white/20 pt-8">
+          <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/60">
+            <p>&copy; {new Date().getFullYear()} Nazareth Law Firm. All rights reserved.</p>
+            <div class="flex gap-6">
+              <a href="#" class="hover:text-primary-400 transition-colors">Privacy Policy</a>
+              <a href="#" class="hover:text-primary-400 transition-colors">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

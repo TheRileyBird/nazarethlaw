@@ -1,0 +1,87 @@
+---
+import PracticeAreaLayout from '../../../layouts/PracticeAreaLayout.astro';
+import { FileText, CheckCircle2, Building } from '@lucide/astro';
+import industrialImage from '../../../assets/images/industrial-image.jpg';
+---
+
+<PracticeAreaLayout
+  title="Property Damage"
+  description="Recovering compensation for damages to your home, business, or personal property"
+  heroImage={industrialImage}
+>
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6" >Property Damage Claims</h2>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+          When your property is damaged due to accidents, natural disasters, or negligence, Nazareth Law Firm helps you recover full compensation for repairs, replacement, and financial losses.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed mb-8">
+          We handle property damage claims arising from various causes and work with insurance companies, contractors, and expert witnesses to document and value your losses accurately.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >Types of Property Damage</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <CheckCircle2 class="w-6 h-6 text-primary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Natural Disasters</h4>
+            <p class="text-sm text-gray-600">Hurricane, flood, fire, and storm damage</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <CheckCircle2 class="w-6 h-6 text-primary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Vehicle Accidents</h4>
+            <p class="text-sm text-gray-600">Auto, truck, and maritime vessel damage</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <CheckCircle2 class="w-6 h-6 text-secondary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Construction Defects</h4>
+            <p class="text-sm text-gray-600">Faulty workmanship and building code violations</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <CheckCircle2 class="w-6 h-6 text-secondary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Business Property</h4>
+            <p class="text-sm text-gray-600">Commercial buildings, equipment, and inventory losses</p>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >What You Can Recover</h3>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <Building class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Repair and reconstruction costs</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Building class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Replacement value for destroyed property</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Building class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Temporary housing or relocation expenses</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Building class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Loss of use and diminished property value</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-br from-accent-900 via-accent-800 to-accent-700">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4" >Protect Your Property Investment</h2>
+      <p class="text-xl text-gray-200 mb-8">We'll fight to recover full compensation for your property damage.</p>
+      <a href="/#contact" class="inline-flex items-center gap-2 bg-secondary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary-600 transition-all shadow-2xl shadow-secondary-500/30">
+        <FileText class="w-5 h-5" />
+        Request Free Consultation
+      </a>
+    </div>
+  </section>
+</PracticeAreaLayout>

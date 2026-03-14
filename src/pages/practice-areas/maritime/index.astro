@@ -1,0 +1,107 @@
+---
+import PracticeAreaLayout from '../../../layouts/PracticeAreaLayout.astro';
+import { FileText, CheckCircle2, Ship } from '@lucide/astro';
+import industrialImage from '../../../assets/images/industrial-image.jpg';
+---
+
+<PracticeAreaLayout
+  title="Maritime Law"
+  description="Expert advocacy for offshore workers, seamen, and maritime industry employees injured in vessel accidents"
+  heroImage={industrialImage}
+>
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6" >Protecting Maritime Workers' Rights</h2>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Maritime workers face unique dangers and are protected by special federal laws including the Jones Act, Longshore and Harbor Workers' Compensation Act (LHWCA), and general maritime law. Nazareth Law Firm provides expert representation for offshore workers, seamen, and maritime industry employees injured on the job.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed mb-8">
+          Our firm has extensive experience handling complex maritime injury claims involving vessel accidents, platform incidents, and offshore disasters. We understand the specialized laws that govern maritime employment and work to maximize compensation for injured workers and their families.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >Types of Maritime Cases</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Jones Act Claims</h4>
+                <p class="text-sm text-gray-600">Representing seamen injured due to employer negligence or unseaworthy vessels</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Offshore Injuries</h4>
+                <p class="text-sm text-gray-600">Oil rig accidents, platform explosions, and drilling incidents</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-secondary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">LHWCA Benefits</h4>
+                <p class="text-sm text-gray-600">Longshore workers, harbor workers, and dock workers compensation claims</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-secondary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Maintenance & Cure</h4>
+                <p class="text-sm text-gray-600">Ensuring injured seamen receive proper medical care and living expenses</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >Common Maritime Injuries</h3>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <Ship class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Falls from heights, slips on wet decks, and equipment accidents</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Ship class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Chemical exposure, fires, and explosions</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Ship class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Crane and heavy equipment incidents</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Ship class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Repetitive stress injuries and occupational diseases</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-br from-accent-900 via-accent-800 to-accent-700">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4" >
+        Experienced Maritime Law Representation
+      </h2>
+      <p class="text-xl text-gray-200 mb-8">
+        We understand the complex federal laws protecting maritime workers. Contact us today.
+      </p>
+      <a href="/#contact" class="inline-flex items-center gap-2 bg-secondary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary-600 transition-all shadow-2xl shadow-secondary-500/30">
+        <FileText class="w-5 h-5" />
+        Request Free Consultation
+      </a>
+    </div>
+  </section>
+</PracticeAreaLayout>

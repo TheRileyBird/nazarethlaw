@@ -1,0 +1,66 @@
+---
+import PracticeAreaLayout from '../../../layouts/PracticeAreaLayout.astro';
+import { FileText, CheckCircle2, Home } from '@lucide/astro';
+import heroBanner from '../../../assets/images/hero-banner.jpg';
+---
+
+<PracticeAreaLayout
+  title="Premises Liability"
+  description="Holding property owners accountable for injuries caused by unsafe conditions"
+  heroImage={heroBanner}
+>
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6" >Premises Liability Claims</h2>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Property owners have a legal duty to maintain safe conditions for visitors and customers. When they fail in this responsibility and someone gets hurt, they can be held liable for resulting injuries and damages.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed mb-8">
+          Nazareth Law Firm represents clients injured on another's property due to hazardous conditions. We handle slip and fall accidents, trip and fall incidents, dog bites, inadequate security cases, and more.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >Common Premises Liability Cases</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <CheckCircle2 class="w-6 h-6 text-primary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Slip and Fall Accidents</h4>
+            <p class="text-sm text-gray-600">Wet floors, uneven surfaces, poor lighting, and hazardous walkways</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <CheckCircle2 class="w-6 h-6 text-primary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Negligent Security</h4>
+            <p class="text-sm text-gray-600">Inadequate lighting, broken locks, lack of security personnel</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <CheckCircle2 class="w-6 h-6 text-secondary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Dog Bites</h4>
+            <p class="text-sm text-gray-600">Owner liability for animal attacks and injuries</p>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <CheckCircle2 class="w-6 h-6 text-secondary-600 mb-3" />
+            <h4 class="font-semibold text-gray-900 mb-2">Swimming Pool Accidents</h4>
+            <p class="text-sm text-gray-600">Drowning and diving injuries due to inadequate supervision or safety measures</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gradient-to-br from-accent-900 via-accent-800 to-accent-700">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4" >Injured on Someone's Property?</h2>
+      <p class="text-xl text-gray-200 mb-8">We'll help you understand your rights and pursue fair compensation.</p>
+      <a href="/#contact" class="inline-flex items-center gap-2 bg-secondary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary-600 transition-all shadow-2xl shadow-secondary-500/30">
+        <FileText class="w-5 h-5" />
+        Request Free Consultation
+      </a>
+    </div>
+  </section>
+</PracticeAreaLayout>

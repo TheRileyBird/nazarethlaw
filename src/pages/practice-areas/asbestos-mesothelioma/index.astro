@@ -1,0 +1,109 @@
+---
+import PracticeAreaLayout from '../../../layouts/PracticeAreaLayout.astro';
+import { FileText, CheckCircle2, Scale } from '@lucide/astro';
+import heroBanner from '../../../assets/images/hero-banner.jpg';
+---
+
+<PracticeAreaLayout
+  title="Asbestos / Mesothelioma"
+  description="Specialized legal representation for individuals and families affected by asbestos exposure and mesothelioma"
+  heroImage={heroBanner}
+>
+  <!-- Content Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6" >Comprehensive Asbestos Litigation</h2>
+
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Nazareth Law Firm specializes in representing individuals and families affected by asbestos exposure and mesothelioma. Our firm handles complex cases involving workplace injuries, product liability, and wrongful death claims to pursue full compensation for medical expenses, lost wages, and pain and suffering.
+        </p>
+
+        <p class="text-gray-700 leading-relaxed mb-8">
+          With decades of experience in asbestos litigation, we understand the devastating impact these diagnoses have on families. We work tirelessly to hold negligent corporations accountable and secure the financial resources our clients need for treatment and care.
+        </p>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >Types of Cases We Handle</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Workplace Exposure</h4>
+                <p class="text-sm text-gray-600">Industrial workers, construction employees, and maritime personnel exposed to asbestos on the job</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Mesothelioma</h4>
+                <p class="text-sm text-gray-600">Aggressive cancer caused by asbestos exposure affecting lung lining and other organs</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-secondary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Product Liability</h4>
+                <p class="text-sm text-gray-600">Cases involving defective asbestos-containing products and inadequate safety warnings</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+            <div class="flex items-start gap-3">
+              <CheckCircle2 class="w-6 h-6 text-secondary-600 flex-shrink-0 mt-1" />
+              <div>
+                <h4 class="font-semibold text-gray-900 mb-2">Wrongful Death</h4>
+                <p class="text-sm text-gray-600">Representing families who have lost loved ones to asbestos-related diseases</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4" >Why Choose Nazareth Law Firm?</h3>
+
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start gap-3">
+            <Scale class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Over $50 million secured in single case recoveries</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Scale class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Extensive experience with Louisiana asbestos litigation and maritime exposure cases</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Scale class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">No fees unless we win your case</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <Scale class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+            <span class="text-gray-700">Personalized attention and compassionate representation</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-br from-accent-900 via-accent-800 to-accent-700">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4" >
+        Get a Free Case Evaluation
+      </h2>
+      <p class="text-xl text-gray-200 mb-8">
+        Time is critical in asbestos cases. Contact us today for a confidential consultation.
+      </p>
+      <a href="/#contact" class="inline-flex items-center gap-2 bg-secondary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary-600 transition-all shadow-2xl shadow-secondary-500/30">
+        <FileText class="w-5 h-5" />
+        Request Free Consultation
+      </a>
+    </div>
+  </section>
+</PracticeAreaLayout>
