@@ -49,7 +49,7 @@
 body {
   font-family: 'League Spartan', system-ui, sans-serif;
   color: #1f2937;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 /* Fluid responsive typography using clamp() */
@@ -119,7 +119,7 @@ h3 {
   transform: translateY(-8px);
 }
 
-/* Geometric corner accents with slide-out animation */
+/* Geometric corner accents with slide-in animation */
 .corner-accent {
   position: relative;
 }
@@ -134,7 +134,7 @@ h3 {
   border-style: solid;
   border-width: 0;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 1;
+  opacity: 0;
   transform: translate(0, 0);
 }
 
@@ -152,15 +152,31 @@ h3 {
   border-right-width: 3px;
 }
 
-/* Corners slide out and fade on hover */
+/* Corners slide in and appear on hover */
 .corner-accent:hover::before {
-  opacity: 0;
-  transform: translate(-20px, -20px);
+  opacity: 1;
+  transform: translate(-5px, -5px);
 }
 
 .corner-accent:hover::after {
-  opacity: 0;
-  transform: translate(20px, 20px);
+  opacity: 1;
+  transform: translate(5px, 5px);
+}
+
+/* Corner accent color variants */
+.corner-accent-primary::before,
+.corner-accent-primary::after {
+  border-color: #009fb7;
+}
+
+.corner-accent-secondary::before,
+.corner-accent-secondary::after {
+  border-color: #c9a961;
+}
+
+.corner-accent-accent::before,
+.corner-accent-accent::after {
+  border-color: #02084b;
 }
 
 /* Geometric background patterns */
