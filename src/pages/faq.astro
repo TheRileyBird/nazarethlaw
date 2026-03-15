@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import { ChevronDown } from '@lucide/astro';
+---
+
+<BaseLayout title="FAQ - Nazareth Law Firm">
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-b from-accent-900 to-accent-800 relative overflow-hidden">
+    <div class="absolute inset-0 bg-pattern-diagonal opacity-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center">
+        <h1 class="text-white mb-6">Frequently Asked Questions</h1>
+        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-normal">
+          Find answers to common questions about our legal services
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gradient-to-b from-gray-100 to-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-6" x-data="{ openFaq: null }">
+        <!-- FAQ Item 1 -->
+        <div class="bg-white border border-gray-200 rounded-none shadow-lg overflow-hidden">
+          <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+            <h3 class="text-xl font-bold text-gray-900">How much does it cost to hire your firm?</h3>
+            <ChevronDown class="w-6 h-6 text-primary-600 transition-transform duration-300" :class="openFaq === 1 ? 'rotate-180' : ''" />
+          </button>
+          <div x-show="openFaq === 1" x-cloak x-transition class="px-8 pb-6">
+            <p class="text-gray-700 leading-normal">We work on a contingency fee basis, which means you don't pay unless we win your case. There are no upfront costs or fees. Our payment comes from a percentage of your settlement or verdict.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 2 -->
+        <div class="bg-white border border-gray-200 rounded-none shadow-lg overflow-hidden">
+          <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+            <h3 class="text-xl font-bold text-gray-900">How long will my case take?</h3>
+            <ChevronDown class="w-6 h-6 text-primary-600 transition-transform duration-300" :class="openFaq === 2 ? 'rotate-180' : ''" />
+          </button>
+          <div x-show="openFaq === 2" x-cloak x-transition class="px-8 pb-6">
+            <p class="text-gray-700 leading-normal">Every case is unique, and timelines can vary significantly depending on the complexity and circumstances. Some cases settle within months, while others may take years to reach resolution. We'll provide you with a realistic timeline during your consultation.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 3 -->
+        <div class="bg-white border border-gray-200 rounded-none shadow-lg overflow-hidden">
+          <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+            <h3 class="text-xl font-bold text-gray-900">What types of cases do you handle?</h3>
+            <ChevronDown class="w-6 h-6 text-primary-600 transition-transform duration-300" :class="openFaq === 3 ? 'rotate-180' : ''" />
+          </button>
+          <div x-show="openFaq === 3" x-cloak x-transition class="px-8 pb-6">
+            <p class="text-gray-700 leading-normal">We specialize in asbestos/mesothelioma cases, maritime law, personal injury, premises liability, product liability, hurricane claims, property damage, and business interruption claims. Our focus is on serious injury and wrongful death cases.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 4 -->
+        <div class="bg-white border border-gray-200 rounded-none shadow-lg overflow-hidden">
+          <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+            <h3 class="text-xl font-bold text-gray-900">Do I need to come to your office for a consultation?</h3>
+            <ChevronDown class="w-6 h-6 text-primary-600 transition-transform duration-300" :class="openFaq === 4 ? 'rotate-180' : ''" />
+          </button>
+          <div x-show="openFaq === 4" x-cloak x-transition class="px-8 pb-6">
+            <p class="text-gray-700 leading-normal">While we welcome you to visit our office, it's not required. We can conduct consultations by phone or video call for your convenience. If necessary, we can also arrange to meet you at your home or hospital.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 5 -->
+        <div class="bg-white border border-gray-200 rounded-none shadow-lg overflow-hidden">
+          <button @click="openFaq = openFaq === 5 ? null : 5" class="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+            <h3 class="text-xl font-bold text-gray-900">What if I can't afford medical treatment?</h3>
+            <ChevronDown class="w-6 h-6 text-primary-600 transition-transform duration-300" :class="openFaq === 5 ? 'rotate-180' : ''" />
+          </button>
+          <div x-show="openFaq === 5" x-cloak x-transition class="px-8 pb-6">
+            <p class="text-gray-700 leading-normal">We can help you find medical providers who will treat you on a lien basis, meaning they'll wait for payment until your case is resolved. Your health and recovery are our top priority.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 6 -->
+        <div class="bg-white border border-gray-200 rounded-none shadow-lg overflow-hidden">
+          <button @click="openFaq = openFaq === 6 ? null : 6" class="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+            <h3 class="text-xl font-bold text-gray-900">Will I have to go to court?</h3>
+            <ChevronDown class="w-6 h-6 text-primary-600 transition-transform duration-300" :class="openFaq === 6 ? 'rotate-180' : ''" />
+          </button>
+          <div x-show="openFaq === 6" x-cloak x-transition class="px-8 pb-6">
+            <p class="text-gray-700 leading-normal">Most cases settle before trial. However, if the insurance company or defendant won't offer a fair settlement, we're prepared to take your case to court. We'll guide you through every step of the process.</p>
+          </div>
+        </div>
+
+        <!-- FAQ Item 7 -->
+        <div class="bg-white border border-gray-200 rounded-none shadow-lg overflow-hidden">
+          <button @click="openFaq = openFaq === 7 ? null : 7" class="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+            <h3 class="text-xl font-bold text-gray-900">How do I know if I have a case?</h3>
+            <ChevronDown class="w-6 h-6 text-primary-600 transition-transform duration-300" :class="openFaq === 7 ? 'rotate-180' : ''" />
+          </button>
+          <div x-show="openFaq === 7" x-cloak x-transition class="px-8 pb-6">
+            <p class="text-gray-700 leading-normal">The best way to find out is to contact us for a free consultation. We'll review the facts of your situation and provide an honest assessment of your case and potential outcomes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="mt-16 bg-primary-50 border-l-4 border-primary-500 p-8">
+        <h2 class="mb-4">Still Have Questions?</h2>
+        <p class="text-gray-700 text-lg leading-normal mb-6">
+          Contact us today for a free, no-obligation consultation. We're here to help.
+        </p>
+        <Button variant="primary" size="lg" href="/contact">
+          Contact Us Now
+        </Button>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

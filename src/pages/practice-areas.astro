@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import { Image } from 'astro:assets';
+import { Factory, Ship, Heart, Home, Package, CloudRain, Building, Briefcase } from '@lucide/astro';
+import industrialImage from '../assets/images/industrial-image.jpg';
+---
+
+<BaseLayout title="Practice Areas - Nazareth Law Firm">
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-b from-accent-900 to-accent-800 relative overflow-hidden">
+    <div class="absolute inset-0 bg-pattern-diagonal opacity-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center">
+        <h1 class="text-white mb-6">Our Practice Areas</h1>
+        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-normal">
+          Comprehensive legal representation across a wide range of personal injury and litigation matters
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section with Image -->
+  <section class="py-20 bg-gradient-to-b from-gray-100 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <!-- Image -->
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-none overflow-hidden shadow-2xl border border-gray-200">
+            <Image
+              src={industrialImage}
+              alt="Industrial workplace"
+              class="w-full h-full object-cover object-center"
+            />
+          </div>
+          <div class="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-primary-500"></div>
+          <div class="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-secondary-500"></div>
+        </div>
+
+        <!-- Content -->
+        <div>
+          <div class="inline-block mb-6">
+            <div class="h-1 w-24 bg-gradient-to-r from-primary-500 via-primary-400 to-transparent"></div>
+          </div>
+
+          <h2 class="mb-8">Dedicated to Protecting Your Rights</h2>
+
+          <div class="space-y-6 text-lg text-gray-700 leading-normal">
+            <p>
+              At Nazareth Law Firm, we specialize in complex personal injury and litigation cases that require extensive legal knowledge, resources, and dedication. Our practice focuses on holding corporations and negligent parties accountable for the harm they cause.
+            </p>
+            <p>
+              With over two decades of experience and more than $50 million recovered for our clients, we have the expertise and track record to handle the most challenging cases. Whether you've been injured in an industrial accident, diagnosed with mesothelioma, or suffered damages from a hurricane, we're here to fight for your rights.
+            </p>
+            <p>
+              We work on a contingency fee basis, which means you don't pay unless we win your case. Our commitment is to provide personalized attention to every client while pursuing maximum compensation for your injuries and losses.
+            </p>
+          </div>
+
+          <div class="mt-10">
+            <Button variant="primary" size="lg" href="/contact">
+              Schedule a Free Consultation
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Practice Areas Grid -->
+      <div class="border-t-2 border-gray-200 pt-16">
+        <div class="text-center mb-12">
+          <h2 class="mb-4">Areas of Expertise</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-normal">
+            Click on any practice area below to learn more about how we can help with your specific legal needs
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Practice Area Card: Asbestos / Mesothelioma -->
+          <a href="/practice-areas/asbestos-mesothelioma" class="corner-accent corner-accent-primary group bg-white rounded-none p-8 border border-gray-200 hover:border-primary-500 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20 block relative">
+            <!-- Hover background reveal -->
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                <Factory class="w-8 h-8 text-white" />
+              </div>
+
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
+                Asbestos / Mesothelioma
+              </h3>
+
+              <p class="text-gray-600 text-base leading-normal">
+                Representing individuals and families affected by asbestos exposure and mesothelioma, handling workplace injuries and wrongful death claims.
+              </p>
+            </div>
+          </a>
+
+          <!-- Practice Area Card: Maritime Law -->
+          <a href="/practice-areas/maritime" class="corner-accent corner-accent-secondary group bg-white rounded-none p-8 border border-gray-200 hover:border-secondary-500 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary-500/20 block relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-secondary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative z-10">
+              <div class="gold-shine-card w-16 h-16 bg-gradient-to-br from-secondary-300 to-secondary-500 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                <Ship class="w-8 h-8 text-white" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-secondary-600 transition-colors duration-300">
+                Maritime Law
+              </h3>
+              <p class="text-gray-600 text-base leading-normal">
+                Expert advocacy for offshore workers, seamen, and maritime industry employees injured in vessel accidents and platform incidents.
+              </p>
+            </div>
+          </a>
+
+          <!-- Practice Area Card: Personal Injury -->
+          <a href="/practice-areas/personal-injury" class="corner-accent corner-accent-accent group bg-white rounded-none p-8 border border-gray-200 hover:border-accent-500 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-500/20 block relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                <Heart class="w-8 h-8 text-white" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-accent-600 transition-colors duration-300">
+                Personal Injury
+              </h3>
+              <p class="text-gray-600 text-base leading-normal">
+                Handling cases involving car crashes, slip-and-falls, medical errors, defective products, and workplace injuries due to negligence.
+              </p>
+            </div>
+          </a>
+
+          <!-- Practice Area Card: Premises Liability -->
+          <a href="/practice-areas/premises-liability" class="corner-accent corner-accent-primary group bg-white rounded-none p-8 border border-gray-200 hover:border-primary-500 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20 block relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                <Home class="w-8 h-8 text-white" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
+                Premises Liability
+              </h3>
+              <p class="text-gray-600 text-base leading-normal">
+                Representing clients injured on another's property due to unsafe conditions, including slip-and-falls and negligent security incidents.
+              </p>
+            </div>
+          </a>
+
+          <!-- Practice Area Card: Product Liability -->
+          <a href="/practice-areas/product-liability" class="corner-accent corner-accent-secondary group bg-white rounded-none p-8 border border-gray-200 hover:border-secondary-500 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary-500/20 block relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-secondary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative z-10">
+              <div class="gold-shine-card w-16 h-16 bg-gradient-to-br from-secondary-300 to-secondary-500 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                <Package class="w-8 h-8 text-white" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-secondary-600 transition-colors duration-300">
+                Product Liability
+              </h3>
+              <p class="text-gray-600 text-base leading-normal">
+                Cases involving defective or dangerous products that cause injuries, pursuing claims for design defects and inadequate warnings.
+              </p>
+            </div>
+          </a>
+
+          <!-- Practice Area Card: Hurricane Claims -->
+          <a href="/practice-areas/hurricane-claims" class="corner-accent corner-accent-accent group bg-white rounded-none p-8 border border-gray-200 hover:border-accent-500 transition-all duration-500 hover:shadow-2xl hover:shadow-accent-500/20 block relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-accent-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                <CloudRain class="w-8 h-8 text-white" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-accent-600 transition-colors duration-300">
+                Hurricane Claims
+              </h3>
+              <p class="text-gray-600 text-base leading-normal">
+                Assisting individuals and businesses with hurricane-related insurance claims to maximize recovery for property damage and losses.
+              </p>
+            </div>
+          </a>
+
+          <!-- Practice Area Card: Property Damage -->
+          <a href="/practice-areas/property-damage" class="corner-accent corner-accent-primary group bg-white rounded-none p-8 border border-gray-200 hover:border-primary-500 transition-all duration-500 hover:shadow-2xl hover:shadow-primary-500/20 block relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative z-10">
+              <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                <Building class="w-8 h-8 text-white" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
+                Property Damage
+              </h3>
+              <p class="text-gray-600 text-base leading-normal">
+                Recovering compensation for damages to homes, vehicles, businesses from accidents, natural disasters, and unforeseen events.
+              </p>
+            </div>
+          </a>
+
+          <!-- Practice Area Card: Business Interruption -->
+          <a href="/practice-areas/business-interruption-claims" class="corner-accent corner-accent-secondary group bg-white rounded-none p-8 border border-gray-200 hover:border-secondary-500 transition-all duration-500 hover:shadow-2xl hover:shadow-secondary-500/20 block relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-secondary-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="relative z-10">
+              <div class="gold-shine-card w-16 h-16 bg-gradient-to-br from-secondary-300 to-secondary-500 rounded-none flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
+                <Briefcase class="w-8 h-8 text-white" />
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-secondary-600 transition-colors duration-300">
+                Business Interruption
+              </h3>
+              <p class="text-gray-600 text-base leading-normal">
+                Helping businesses recover financial losses from operational disruptions caused by disasters, fires, and other covered incidents.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-accent-900 relative overflow-hidden">
+    <div class="absolute inset-0 bg-pattern-grid opacity-10"></div>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h2 class="text-white mb-6">Don't See Your Case Listed?</h2>
+      <p class="text-xl text-white/90 leading-normal mb-8">
+        We handle a wide range of personal injury and litigation matters. Contact us to discuss your specific situation and learn how we can help.
+      </p>
+      <Button variant="secondary" size="lg" href="/contact">
+        Contact Us Today
+      </Button>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

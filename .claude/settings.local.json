@@ -20,7 +20,8 @@
       "Bash(npm run build:*)",
       "Bash(pkill:*)",
       "Bash(lsof:*)",
-      "Bash(xargs kill:*)"
+      "Bash(xargs kill:*)",
+      "WebFetch(domain:www.chrishartlaw.com)"
     ]
   }
 }

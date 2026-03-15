@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import { Phone, Mail } from '@lucide/astro';
+import logo from '../assets/images/logo.png';
+---
+
+<!-- Footer -->
+<footer class="bg-accent-500 text-white py-20 border-t-4 border-primary-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-16 mb-12">
+      <!-- Logo & About -->
+      <div>
+        <Image src={logo} alt="Nazareth Law Firm" class="h-24 w-auto mb-6 brightness-0 invert" />
+        <p class="text-white/70 leading-normal text-base">
+          Expert legal representation for victims of major industrial disasters and environmental exposures.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-sm font-bold mb-6 text-white uppercase tracking-widest">Quick Links</h3>
+        <ul class="space-y-3">
+          <li><a href="/practice-areas" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Practice Areas</a></li>
+          <li><a href="/practice-areas/asbestos-mesothelioma" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Asbestos / Mesothelioma</a></li>
+          <li><a href="/practice-areas/maritime" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Maritime Law</a></li>
+          <li><a href="/practice-areas/personal-injury" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Personal Injury</a></li>
+          <li><a href="/about" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">About</a></li>
+          <li><a href="/faq" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">FAQ</a></li>
+          <li><a href="/blog" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Blog</a></li>
+          <li><a href="/contact" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-sm font-bold mb-6 text-white uppercase tracking-widest">Contact</h3>
+        <ul class="space-y-4 text-white/70">
+          <li class="flex items-start gap-3">
+            <Phone class="w-5 h-5 mt-1 flex-shrink-0 text-primary-400" />
+            <a href="tel:+15044082284" class="hover:text-primary-400 transition-colors duration-300 text-base">504-408-2284</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <Mail class="w-5 h-5 mt-1 flex-shrink-0 text-primary-400" />
+            <span class="text-base">info@nazarethlawfirm.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 pt-10">
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-white/50">
+        <p class="text-sm">&copy; {new Date().getFullYear()} Nazareth Law Firm. All rights reserved.</p>
+        <div class="flex gap-8">
+          <a href="/privacy-policy" class="hover:text-primary-400 transition-colors duration-300 text-sm">Privacy Policy</a>
+          <a href="/terms-of-service" class="hover:text-primary-400 transition-colors duration-300 text-sm">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

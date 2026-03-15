@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import CornerAccentCard from '../components/CornerAccentCard.astro';
+import { Image } from 'astro:assets';
+import neilAttorney from '../assets/images/neil-attorney.jpg';
+---
+
+<BaseLayout title="About Us - Nazareth Law Firm">
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-20 bg-gradient-to-b from-accent-900 to-accent-800 relative overflow-hidden">
+    <div class="absolute inset-0 bg-pattern-diagonal opacity-10"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center">
+        <h1 class="text-white mb-6">About Neil F. Nazareth</h1>
+        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-normal">
+          Over two decades of dedicated legal representation for victims of industrial disasters
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 bg-gradient-to-b from-gray-100 to-white relative overflow-hidden bg-pattern-diagonal">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 border-4 border-secondary-500/5 rotate-45 -translate-x-1/2 translate-y-1/2"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+        <!-- Left: Content -->
+        <div>
+          <div class="inline-block mb-6">
+            <div class="h-1 w-24 bg-gradient-to-r from-primary-500 via-primary-400 to-transparent"></div>
+          </div>
+
+          <h2 class="mb-8">Principal Attorney</h2>
+
+          <div class="space-y-6 text-lg text-gray-700 leading-normal mb-10">
+            <p>
+              With over two decades of experience, Neil F. Nazareth has dedicated his career to representing victims of major industrial disasters and environmental exposures.
+            </p>
+            <p>
+              Recognized annually as a Louisiana Super Lawyer since 2013, Neil has secured over $50 million in compensation for individual clients in complex asbestos and maritime litigation cases.
+            </p>
+            <p>
+              His expertise spans catastrophic injury claims, wrongful death cases, and holding corporations accountable for negligence that harms workers and communities.
+            </p>
+            <p>
+              Neil's commitment to his clients goes beyond legal representation. He understands the physical, emotional, and financial toll that serious injuries and illnesses take on families, and he works tirelessly to ensure they receive the justice and compensation they deserve.
+            </p>
+          </div>
+
+          <!-- Credentials with corner accents -->
+          <div class="grid sm:grid-cols-2 gap-6">
+            <CornerAccentCard accentColor="primary" class="bg-white p-8 rounded-none border border-primary-500/30 shadow-lg hover-lift hover:border-primary-500 transition-all duration-500">
+              <div class="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider">Recognition</div>
+              <div class="text-base text-gray-700 leading-normal">Louisiana Super Lawyers 2013-Present</div>
+            </CornerAccentCard>
+            <CornerAccentCard accentColor="secondary" class="bg-white p-8 rounded-none border border-secondary-500/30 shadow-lg hover-lift hover:border-secondary-500 transition-all duration-500">
+              <div class="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wider">Specialization</div>
+              <div class="text-base text-gray-700 leading-normal">Asbestos & Maritime Litigation</div>
+            </CornerAccentCard>
+          </div>
+
+          <div class="mt-10">
+            <Button variant="primary" size="lg" href="/contact">
+              Schedule a Free Consultation
+            </Button>
+          </div>
+        </div>
+
+        <!-- Right: Professional Image -->
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-none overflow-hidden shadow-2xl border border-gray-200">
+            <Image
+              src={neilAttorney}
+              alt="Neil F. Nazareth, Principal Attorney"
+              class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-700"
+            />
+          </div>
+          <!-- Decorative corner accent -->
+          <div class="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-primary-500"></div>
+          <div class="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-secondary-500"></div>
+          <!-- Decorative background blur -->
+          <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-secondary-500/10 rounded-full blur-3xl -z-10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="mb-6">Why Choose Nazareth Law Firm</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gradient-to-br from-primary-50 to-white p-8 border-l-4 border-primary-500">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Proven Track Record</h3>
+          <p class="text-gray-700 leading-normal">Over $50 million secured for individual clients, with numerous multi-million dollar settlements and verdicts.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-secondary-50 to-white p-8 border-l-4 border-secondary-500">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">No Win, No Fee</h3>
+          <p class="text-gray-700 leading-normal">We work on a contingency basis, meaning you pay nothing unless we win your case.</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-accent-50 to-white p-8 border-l-4 border-accent-500">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Personal Attention</h3>
+          <p class="text-gray-700 leading-normal">Every client receives personalized attention and direct access to experienced legal counsel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>
