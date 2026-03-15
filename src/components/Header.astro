@@ -5,7 +5,7 @@ import logoHorizontal from '../assets/images/logo-horizontal.png';
 ---
 
 <!-- Navigation -->
-<nav x-data="{ mobileMenuOpen: false, scrolled: false, practiceAreasOpen: false }" @scroll.window.throttle.50ms="scrolled = window.scrollY > 50" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-500 ease-in-out border-b" :class="scrolled ? 'bg-white/95 border-gray-100 shadow-md' : 'bg-transparent border-transparent'">
+<nav x-data="{ mobileMenuOpen: false, scrolled: false, practiceAreasOpen: false, init() { this.scrolled = window.scrollY > 50; } }" @scroll.window.throttle.50ms="scrolled = window.scrollY > 50" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-500 ease-in-out border-b" :class="scrolled ? 'bg-white/95 border-gray-100 shadow-md' : 'bg-transparent border-transparent'">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between transition-all duration-500 ease-in-out" :class="scrolled ? 'h-16' : 'h-20'">
       <!-- Logo -->
