@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import InteriorHero from '../components/InteriorHero.astro';
 import Button from '../components/Button.astro';
 import CornerAccentCard from '../components/CornerAccentCard.astro';
 import { Image } from 'astro:assets';
@@ -11,18 +12,10 @@ import neilAttorney from '../assets/images/neil-attorney.jpg';
 <BaseLayout title="About Us - Nazareth Law Firm">
   <Header />
 
-  <!-- Hero Section -->
-  <section class="pt-32 pb-20 bg-gradient-to-b from-accent-900 to-accent-800 relative overflow-hidden">
-    <div class="absolute inset-0 bg-pattern-diagonal opacity-10"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="text-center">
-        <h1 class="text-white mb-6">About Neil F. Nazareth</h1>
-        <p class="text-xl text-white/90 max-w-3xl mx-auto leading-normal">
-          Over two decades of dedicated legal representation for victims of industrial disasters
-        </p>
-      </div>
-    </div>
-  </section>
+  <InteriorHero
+    title="About Neil F. Nazareth"
+    description="Over two decades of dedicated legal representation for victims of industrial disasters"
+  />
 
   <!-- About Section -->
   <section class="py-20 bg-gradient-to-b from-gray-100 to-white relative overflow-hidden bg-pattern-diagonal">
