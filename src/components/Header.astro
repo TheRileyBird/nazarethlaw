@@ -5,19 +5,19 @@ import logoHorizontal from '../assets/images/logo-horizontal.png';
 ---
 
 <!-- Navigation -->
-<nav x-data="{ mobileMenuOpen: false, scrolled: false, practiceAreasOpen: false }" @scroll.window="scrolled = window.scrollY > 50" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 transition-all duration-700 ease-in-out" :class="scrolled ? 'shadow-md' : ''">
+<nav x-data="{ mobileMenuOpen: false, scrolled: false, practiceAreasOpen: false }" @scroll.window.throttle.50ms="scrolled = window.scrollY > 50" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-500 ease-in-out border-b" :class="scrolled ? 'bg-white/95 border-gray-100 shadow-md' : 'bg-transparent border-transparent'">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between transition-all duration-700 ease-in-out" :class="scrolled ? 'h-16' : 'h-20'">
+    <div class="flex items-center justify-between transition-all duration-500 ease-in-out" :class="scrolled ? 'h-16' : 'h-20'">
       <!-- Logo -->
-      <a href="/" class="flex-shrink-0 transition-all duration-700 ease-in-out drop-shadow-md hover:drop-shadow-lg">
-        <Image src={logoHorizontal} alt="Nazareth Law Firm" class="w-auto transition-all duration-700 ease-in-out" :class="scrolled ? 'h-8' : 'h-12'" />
+      <a href="/" class="flex-shrink-0 transition-all duration-500 ease-in-out drop-shadow-md hover:drop-shadow-lg">
+        <Image src={logoHorizontal} alt="Nazareth Law Firm" class="w-auto transition-all duration-500 ease-in-out" :class="scrolled ? 'h-8' : 'h-12'" />
       </a>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center space-x-8">
         <!-- Practice Areas Dropdown -->
         <div class="relative" @mouseenter="practiceAreasOpen = true" @mouseleave="practiceAreasOpen = false">
-          <a href="/practice-areas" class="text-gray-700 hover:text-primary-600 font-bold transition-colors duration-200 text-sm uppercase tracking-wider flex items-center gap-1">
+          <a href="/practice-areas" class="font-bold transition-colors duration-200 text-sm uppercase tracking-wider flex items-center gap-1" :class="scrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white hover:text-primary-300'">
             Practice Areas
             <ChevronDown class="w-4 h-4" />
           </a>
@@ -32,25 +32,25 @@ import logoHorizontal from '../assets/images/logo-horizontal.png';
             <a href="/practice-areas/business-interruption-claims" class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary-50 hover:text-primary-600 transition-colors">Business Interruption</a>
           </div>
         </div>
-        <a href="/about" class="text-gray-700 hover:text-primary-600 font-bold transition-colors duration-200 text-sm uppercase tracking-wider">About</a>
-        <a href="/faq" class="text-gray-700 hover:text-primary-600 font-bold transition-colors duration-200 text-sm uppercase tracking-wider">FAQ</a>
-        <a href="/blog" class="text-gray-700 hover:text-primary-600 font-bold transition-colors duration-200 text-sm uppercase tracking-wider">Blog</a>
-        <a href="/contact" class="text-gray-700 hover:text-primary-600 font-bold transition-colors duration-200 text-sm uppercase tracking-wider">Contact</a>
-        <a href="tel:+15044082284" class="inline-flex items-center gap-2 bg-accent-500 text-white rounded-none font-semibold hover:bg-accent-600 transition-all duration-700 ease-in-out shadow-lg shadow-accent-500/20 hover:shadow-xl hover:shadow-accent-500/30 border-2 border-accent-400" :class="scrolled ? 'px-4 py-2 text-sm' : 'px-6 py-3 text-base'">
-          <Phone class="transition-all duration-700 ease-in-out" :class="scrolled ? 'w-3 h-3' : 'w-4 h-4'" />
+        <a href="/about" class="font-bold transition-colors duration-200 text-sm uppercase tracking-wider" :class="scrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white hover:text-primary-300'">About</a>
+        <a href="/faq" class="font-bold transition-colors duration-200 text-sm uppercase tracking-wider" :class="scrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white hover:text-primary-300'">FAQ</a>
+        <a href="/blog" class="font-bold transition-colors duration-200 text-sm uppercase tracking-wider" :class="scrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white hover:text-primary-300'">Blog</a>
+        <a href="/contact" class="font-bold transition-colors duration-200 text-sm uppercase tracking-wider" :class="scrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white hover:text-primary-300'">Contact</a>
+        <a href="tel:+15044082284" class="inline-flex items-center gap-2 rounded-none font-semibold bg-primary-500 text-white hover:bg-primary-600 shadow-lg hover:shadow-xl shadow-primary-500/20 hover:shadow-primary-500/30 border-2 border-primary-400 transition-all duration-500 ease-in-out" :class="scrolled ? 'px-4 py-2 text-sm' : 'px-6 py-3 text-base'">
+          <Phone class="transition-all duration-500 ease-in-out" :class="scrolled ? 'w-3 h-3' : 'w-4 h-4'" />
           504-408-2284
         </a>
       </div>
 
       <!-- Mobile menu button -->
-      <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
-        <Menu x-show="!mobileMenuOpen" class="w-6 h-6 text-gray-700" />
-        <X x-show="mobileMenuOpen" x-cloak class="w-6 h-6 text-gray-700" />
+      <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 rounded-lg transition-colors" :class="scrolled ? 'hover:bg-gray-100' : 'hover:bg-white/10'">
+        <Menu x-show="!mobileMenuOpen" class="w-6 h-6 transition-colors" :class="scrolled ? 'text-gray-700' : 'text-white'" />
+        <X x-show="mobileMenuOpen" x-cloak class="w-6 h-6 transition-colors" :class="scrolled ? 'text-gray-700' : 'text-white'" />
       </button>
     </div>
 
     <!-- Mobile Navigation -->
-    <div x-show="mobileMenuOpen" x-cloak class="md:hidden py-4 border-t border-gray-100">
+    <div x-show="mobileMenuOpen" x-cloak class="md:hidden py-4 border-t bg-white/95 backdrop-blur-sm" :class="scrolled ? 'border-gray-100' : 'border-transparent'">
       <div class="flex flex-col space-y-3">
         <a href="/practice-areas" class="text-gray-700 hover:text-primary-600 font-bold px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm border-b border-gray-200">All Practice Areas</a>
         <a href="/practice-areas/asbestos-mesothelioma" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">Asbestos / Mesothelioma</a>
