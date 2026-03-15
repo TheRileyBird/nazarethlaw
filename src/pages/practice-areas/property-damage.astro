@@ -1,14 +1,21 @@
 ---
-import PracticeAreaLayout from '../../../layouts/PracticeAreaLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import InteriorHero from '../../components/InteriorHero.astro';
+import Button from '../../components/Button.astro';
 import { FileText, CheckCircle2, Building } from '@lucide/astro';
-import industrialImage from '../../../assets/images/industrial-image.jpg';
+import industrialImage from '../../assets/images/industrial-image.jpg';
 ---
 
-<PracticeAreaLayout
-  title="Property Damage"
-  description="Recovering compensation for damages to your home, business, or personal property"
-  heroImage={industrialImage}
->
+<BaseLayout title="Property Damage - Nazareth Law Firm">
+  <Header />
+
+  <InteriorHero
+    title="Property Damage"
+    description="Recovering compensation for damages to your home, business, or personal property"
+    heroImage={industrialImage}
+  />
   <section class="py-24 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="prose prose-lg max-w-none">
@@ -78,10 +85,12 @@ import industrialImage from '../../../assets/images/industrial-image.jpg';
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-bold text-white mb-4" >Protect Your Property Investment</h2>
       <p class="text-xl text-gray-200 mb-8">We'll fight to recover full compensation for your property damage.</p>
-      <a href="/#contact" class="inline-flex items-center gap-2 bg-secondary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary-600 transition-all shadow-2xl shadow-secondary-500/30">
+      <Button href="/#contact" variant="primary" size="lg">
         <FileText class="w-5 h-5" />
         Request Free Consultation
-      </a>
+      </Button>
     </div>
   </section>
-</PracticeAreaLayout>
+
+  <Footer />
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  description: string;
+  heroImage?: any;
+}
+
+const { title, description, heroImage } = Astro.props;
+---
+
+<section class="relative h-96 flex items-center justify-center overflow-hidden pt-20">
+  {heroImage && (
+    <div class="absolute inset-0">
+      <Image
+        src={heroImage}
+        alt={title}
+        class="w-full h-full object-cover object-center"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-accent-900/90 via-accent-800/85 to-accent-700/80"></div>
+    </div>
+  )}
+  {!heroImage && (
+    <div class="absolute inset-0 bg-gradient-to-br from-accent-900 via-accent-800 to-accent-700"></div>
+  )}
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="inline-block mb-6" x-data x-intersect="$el.classList.add('animate')">
+      <div class="h-1 w-24 bg-gradient-to-r from-primary-400 via-primary-300 to-transparent"></div>
+    </div>
+    <h1 class="text-white mb-6 stagger-1" x-data x-intersect="$el.classList.add('animate')">
+      {title}
+    </h1>
+    <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto leading-normal stagger-2" x-data x-intersect="$el.classList.add('animate')">
+      {description}
+    </p>
+  </div>
+</section>

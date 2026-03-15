@@ -1,14 +1,21 @@
 ---
-import PracticeAreaLayout from '../../../layouts/PracticeAreaLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import InteriorHero from '../../components/InteriorHero.astro';
+import Button from '../../components/Button.astro';
 import { FileText, CheckCircle2, Ship } from '@lucide/astro';
-import industrialImage from '../../../assets/images/industrial-image.jpg';
+import industrialImage from '../../assets/images/industrial-image.jpg';
 ---
 
-<PracticeAreaLayout
-  title="Maritime Law"
-  description="Expert advocacy for offshore workers, seamen, and maritime industry employees injured in vessel accidents"
-  heroImage={industrialImage}
->
+<BaseLayout title="Maritime Law - Nazareth Law Firm">
+  <Header />
+
+  <InteriorHero
+    title="Maritime Law"
+    description="Expert advocacy for offshore workers, seamen, and maritime industry employees injured in vessel accidents"
+    heroImage={industrialImage}
+  />
   <section class="py-24 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="prose prose-lg max-w-none">
@@ -25,42 +32,42 @@ import industrialImage from '../../../assets/images/industrial-image.jpg';
         <h3 class="text-2xl font-bold text-gray-900 mb-4" >Types of Maritime Cases</h3>
 
         <div class="grid md:grid-cols-2 gap-6 mb-8">
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+          <div class="bg-gray-50 p-8 rounded-none border-l-4 border-primary-500 hover:bg-white transition-colors duration-300">
             <div class="flex items-start gap-3">
               <CheckCircle2 class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
               <div>
                 <h4 class="font-semibold text-gray-900 mb-2">Jones Act Claims</h4>
-                <p class="text-sm text-gray-600">Representing seamen injured due to employer negligence or unseaworthy vessels</p>
+                <p class="text-base text-gray-600 leading-relaxed">Representing seamen injured due to employer negligence or unseaworthy vessels</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-primary-500">
+          <div class="bg-gray-50 p-8 rounded-none border-l-4 border-primary-500 hover:bg-white transition-colors duration-300">
             <div class="flex items-start gap-3">
               <CheckCircle2 class="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
               <div>
                 <h4 class="font-semibold text-gray-900 mb-2">Offshore Injuries</h4>
-                <p class="text-sm text-gray-600">Oil rig accidents, platform explosions, and drilling incidents</p>
+                <p class="text-base text-gray-600 leading-relaxed">Oil rig accidents, platform explosions, and drilling incidents</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+          <div class="bg-gray-50 p-8 rounded-none border-l-4 border-secondary-500 hover:bg-white transition-colors duration-300">
             <div class="flex items-start gap-3">
               <CheckCircle2 class="w-6 h-6 text-secondary-600 flex-shrink-0 mt-1" />
               <div>
                 <h4 class="font-semibold text-gray-900 mb-2">LHWCA Benefits</h4>
-                <p class="text-sm text-gray-600">Longshore workers, harbor workers, and dock workers compensation claims</p>
+                <p class="text-base text-gray-600 leading-relaxed">Longshore workers, harbor workers, and dock workers compensation claims</p>
               </div>
             </div>
           </div>
 
-          <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-secondary-500">
+          <div class="bg-gray-50 p-8 rounded-none border-l-4 border-secondary-500 hover:bg-white transition-colors duration-300">
             <div class="flex items-start gap-3">
               <CheckCircle2 class="w-6 h-6 text-secondary-600 flex-shrink-0 mt-1" />
               <div>
                 <h4 class="font-semibold text-gray-900 mb-2">Maintenance & Cure</h4>
-                <p class="text-sm text-gray-600">Ensuring injured seamen receive proper medical care and living expenses</p>
+                <p class="text-base text-gray-600 leading-relaxed">Ensuring injured seamen receive proper medical care and living expenses</p>
               </div>
             </div>
           </div>
@@ -98,10 +105,12 @@ import industrialImage from '../../../assets/images/industrial-image.jpg';
       <p class="text-xl text-gray-200 mb-8">
         We understand the complex federal laws protecting maritime workers. Contact us today.
       </p>
-      <a href="/#contact" class="inline-flex items-center gap-2 bg-secondary-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-secondary-600 transition-all shadow-2xl shadow-secondary-500/30">
+      <Button href="/#contact" variant="primary" size="lg">
         <FileText class="w-5 h-5" />
         Request Free Consultation
-      </a>
+      </Button>
     </div>
   </section>
-</PracticeAreaLayout>
+
+  <Footer />
+</BaseLayout>
