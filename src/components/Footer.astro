@@ -1,46 +1,50 @@
 ---
 import { Image } from 'astro:assets';
 import { Phone, Mail } from '@lucide/astro';
-import logo from '../assets/images/logo.png';
+import lightLogoSquare from '../assets/images/light-logo-square.png';
 ---
 
 <!-- Footer -->
-<footer class="bg-accent-500 text-white py-20 border-t-4 border-primary-500">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid md:grid-cols-3 gap-16 mb-12">
+<footer class="bg-accent-900 text-white py-20 border-t-4 border-primary-500 relative overflow-hidden">
+  <!-- Gradient/Glow Background Effects -->
+  <div class="absolute top-0 left-0 w-[600px] h-[600px] bg-secondary-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+  <div class="absolute bottom-0 right-0 w-[800px] h-[800px] bg-secondary-600/15 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+  <div class="absolute top-1/2 left-1/3 w-[500px] h-[500px] bg-secondary-400/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid md:grid-cols-4 gap-12 mb-12">
       <!-- Logo & About -->
-      <div>
-        <Image src={logo} alt="Nazareth Law Firm" class="h-32 w-auto mb-6" />
-        <p class="text-white/70 leading-normal text-base">
+      <div class="md:col-span-1">
+        <Image src={lightLogoSquare} alt="Nazareth Law Firm" class="w-32 h-auto mb-6" />
+        <p class="text-white/60 leading-relaxed text-base">
           Expert legal representation for victims of major industrial disasters and environmental exposures.
         </p>
       </div>
 
-      <!-- Quick Links -->
-      <div>
-        <h3 class="text-sm font-bold mb-6 text-white uppercase tracking-widest">Quick Links</h3>
-        <ul class="space-y-3">
-          <li><a href="/practice-areas" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Practice Areas</a></li>
-          <li><a href="/practice-areas/asbestos-mesothelioma" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Asbestos / Mesothelioma</a></li>
-          <li><a href="/practice-areas/maritime" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Maritime Law</a></li>
-          <li><a href="/practice-areas/personal-injury" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Personal Injury</a></li>
-          <li><a href="/about" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">About</a></li>
-          <li><a href="/faq" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">FAQ</a></li>
-          <li><a href="/blog" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Blog</a></li>
-          <li><a href="/contact" class="text-white/70 hover:text-primary-400 transition-colors duration-300 text-base">Contact</a></li>
-        </ul>
+      <!-- Practice Areas -->
+      <div class="md:col-span-2">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <a href="/practice-areas/asbestos-mesothelioma" class="text-white/80 hover:text-secondary-400 transition-colors duration-300 text-lg font-medium">Asbestos / Mesothelioma</a>
+          <a href="/practice-areas/maritime" class="text-white/80 hover:text-secondary-400 transition-colors duration-300 text-lg font-medium">Maritime Law</a>
+          <a href="/practice-areas/personal-injury" class="text-white/80 hover:text-secondary-400 transition-colors duration-300 text-lg font-medium">Personal Injury</a>
+          <a href="/practice-areas/premises-liability" class="text-white/80 hover:text-secondary-400 transition-colors duration-300 text-lg font-medium">Premises Liability</a>
+          <a href="/practice-areas/product-liability" class="text-white/80 hover:text-secondary-400 transition-colors duration-300 text-lg font-medium">Product Liability</a>
+          <a href="/practice-areas/hurricane-claims" class="text-white/80 hover:text-secondary-400 transition-colors duration-300 text-lg font-medium">Hurricane Claims</a>
+          <a href="/practice-areas/property-damage" class="text-white/80 hover:text-secondary-400 transition-colors duration-300 text-lg font-medium">Property Damage</a>
+          <a href="/practice-areas/business-interruption-claims" class="text-white/80 hover:text-secondary-400 transition-colors duration-300 text-lg font-medium">Business Interruption</a>
+        </div>
       </div>
 
       <!-- Contact -->
-      <div>
-        <h3 class="text-sm font-bold mb-6 text-white uppercase tracking-widest">Contact</h3>
+      <div class="md:col-span-1">
+        <h3 class="text-base font-bold mb-6 text-white uppercase tracking-widest">Contact</h3>
         <ul class="space-y-4 text-white/70">
           <li class="flex items-start gap-3">
-            <Phone class="w-5 h-5 mt-1 flex-shrink-0 text-primary-400" />
-            <a href="tel:+15044082284" class="hover:text-primary-400 transition-colors duration-300 text-base">504-408-2284</a>
+            <Phone class="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary-400" />
+            <a href="tel:+15044082284" class="hover:text-secondary-400 transition-colors duration-300 text-base">504-408-2284</a>
           </li>
           <li class="flex items-start gap-3">
-            <Mail class="w-5 h-5 mt-1 flex-shrink-0 text-primary-400" />
+            <Mail class="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary-400" />
             <span class="text-base">info@nazarethlawfirm.com</span>
           </li>
         </ul>
