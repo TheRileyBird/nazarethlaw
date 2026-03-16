@@ -25,7 +25,8 @@
       "WebSearch",
       "Bash(pgrep:*)",
       "Bash(kill:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(npx astro build:*)"
     ]
   }
 }
