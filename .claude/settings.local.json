@@ -24,7 +24,8 @@
       "WebFetch(domain:www.chrishartlaw.com)",
       "WebSearch",
       "Bash(pgrep:*)",
-      "Bash(kill:*)"
+      "Bash(kill:*)",
+      "Bash(grep:*)"
     ]
   }
 }
