@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import { Phone, Mail } from '@lucide/astro';
+import { Phone, Mail, MapPin } from '@lucide/astro';
 import lightLogoSquare from '../assets/images/light-logo-square.png';
 ---
 
@@ -35,10 +35,17 @@ import lightLogoSquare from '../assets/images/light-logo-square.png';
         </div>
       </div>
 
-      <!-- Contact -->
+      <!-- Office -->
       <div class="md:col-span-1">
-        <h3 class="text-base font-bold mb-6 text-white uppercase tracking-widest">Contact</h3>
+        <h3 class="text-base font-bold mb-6 text-white uppercase tracking-widest">Office</h3>
         <ul class="space-y-4 text-white/70">
+          <li class="flex items-start gap-3">
+            <MapPin class="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary-400" />
+            <div class="text-base">
+              650 Poydras Street, Suite 2828<br />
+              New Orleans, LA 70130
+            </div>
+          </li>
           <li class="flex items-start gap-3">
             <Phone class="w-5 h-5 mt-0.5 flex-shrink-0 text-secondary-400" />
             <a href="tel:+15044082284" class="hover:text-secondary-400 transition-colors duration-300 text-base">504-408-2284</a>
