@@ -27,7 +27,8 @@
       "Bash(kill:*)",
       "Bash(grep:*)",
       "Bash(npx astro build:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(find:*)"
     ]
   }
 }
