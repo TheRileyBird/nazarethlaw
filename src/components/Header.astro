@@ -5,7 +5,7 @@ import logoHorizontal from '../assets/images/logo-horizontal.png';
 ---
 
 <!-- Navigation -->
-<nav x-data="{ mobileMenuOpen: false, scrolled: false, practiceAreasOpen: false, init() { this.scrolled = window.scrollY > 50; } }" @scroll.window.throttle.50ms="scrolled = window.scrollY > 50" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-500 ease-in-out border-b" :class="scrolled ? 'bg-white/95 border-gray-100 shadow-md' : 'bg-transparent border-transparent'">
+<nav x-data="{ mobileMenuOpen: false, scrolled: false, practiceAreasOpen: false, mobilePracticeAreasOpen: false, init() { this.scrolled = window.scrollY > 50; } }" @scroll.window.throttle.50ms="scrolled = window.scrollY > 50" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-500 ease-in-out border-b" :class="scrolled ? 'bg-white/95 border-gray-100 shadow-md' : 'bg-transparent border-transparent'">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between transition-all duration-500 ease-in-out" :class="scrolled ? 'h-16' : 'h-20'">
       <!-- Logo -->
@@ -14,7 +14,7 @@ import logoHorizontal from '../assets/images/logo-horizontal.png';
       </a>
 
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-8">
+      <div class="hidden lg:flex items-center space-x-8">
         <!-- Practice Areas Dropdown -->
         <div class="relative" @mouseenter="practiceAreasOpen = true" @mouseleave="practiceAreasOpen = false">
           <a href="/practice-areas" class="font-bold transition-colors duration-200 text-sm uppercase tracking-wider flex items-center gap-1" :class="scrolled ? 'text-gray-700 hover:text-primary-600' : 'text-white hover:text-primary-300'">
@@ -43,24 +43,40 @@ import logoHorizontal from '../assets/images/logo-horizontal.png';
       </div>
 
       <!-- Mobile menu button -->
-      <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 rounded-lg transition-colors" :class="scrolled ? 'hover:bg-gray-100' : 'hover:bg-white/10'">
+      <button @click="mobileMenuOpen = !mobileMenuOpen" class="lg:hidden p-2 rounded-lg transition-colors" :class="scrolled ? 'hover:bg-gray-100' : 'hover:bg-white/10'">
         <Menu x-show="!mobileMenuOpen" class="w-6 h-6 transition-colors" :class="scrolled ? 'text-gray-700' : 'text-white'" />
         <X x-show="mobileMenuOpen" x-cloak class="w-6 h-6 transition-colors" :class="scrolled ? 'text-gray-700' : 'text-white'" />
       </button>
     </div>
 
     <!-- Mobile Navigation -->
-    <div x-show="mobileMenuOpen" x-cloak class="md:hidden py-4 border-t bg-white/95 backdrop-blur-sm" :class="scrolled ? 'border-gray-100' : 'border-transparent'">
+    <div x-show="mobileMenuOpen" x-cloak class="lg:hidden py-4 border-t bg-white/95 backdrop-blur-sm" :class="scrolled ? 'border-gray-100' : 'border-transparent'">
       <div class="flex flex-col space-y-3">
-        <a href="/practice-areas" class="text-gray-700 hover:text-primary-600 font-bold px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm border-b border-gray-200">All Practice Areas</a>
-        <a href="/practice-areas/asbestos-mesothelioma" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">Asbestos / Mesothelioma</a>
-        <a href="/practice-areas/maritime" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">Maritime Law</a>
-        <a href="/practice-areas/personal-injury" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">Personal Injury</a>
-        <a href="/practice-areas/premises-liability" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">Premises Liability</a>
-        <a href="/practice-areas/product-liability" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">Product Liability</a>
-        <a href="/practice-areas/hurricane-claims" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">Hurricane Claims</a>
-        <a href="/practice-areas/property-damage" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">Property Damage</a>
-        <a href="/practice-areas/business-interruption-claims" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">Business Interruption</a>
+        <!-- Practice Areas Accordion -->
+        <div>
+          <button @click="mobilePracticeAreasOpen = !mobilePracticeAreasOpen" class="w-full text-left text-gray-700 hover:text-primary-600 px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm flex items-center justify-between">
+            Practice Areas
+            <ChevronDown class="w-4 h-4 transition-transform duration-200" :class="mobilePracticeAreasOpen ? 'rotate-180' : ''" />
+          </button>
+          <div x-show="mobilePracticeAreasOpen"
+               x-transition:enter="transition ease-out duration-200"
+               x-transition:enter-start="opacity-0 -translate-y-2"
+               x-transition:enter-end="opacity-100 translate-y-0"
+               x-transition:leave="transition ease-in duration-150"
+               x-transition:leave-start="opacity-100 translate-y-0"
+               x-transition:leave-end="opacity-0 -translate-y-2"
+               class="flex flex-col pl-4 mt-2 space-y-2">
+            <a href="/practice-areas/asbestos-mesothelioma" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-xs">Asbestos / Mesothelioma</a>
+            <a href="/practice-areas/business-interruption-claims" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-xs">Business Interruption</a>
+            <a href="/practice-areas/hurricane-claims" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-xs">Hurricane Claims</a>
+            <a href="/practice-areas/maritime" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-xs">Maritime Law</a>
+            <a href="/practice-areas/personal-injury" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-xs">Personal Injury</a>
+            <a href="/practice-areas/premises-liability" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-xs">Premises Liability</a>
+            <a href="/practice-areas/product-liability" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-xs">Product Liability</a>
+            <a href="/practice-areas/property-damage" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-xs">Property Damage</a>
+          </div>
+        </div>
+
         <a href="/about" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">About</a>
         <a href="/faq" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">FAQ</a>
         <a href="/blog" class="text-gray-700 hover:text-primary-600 font-medium px-3 py-2 hover:bg-gray-50 transition-colors uppercase tracking-wider text-sm">Blog</a>
