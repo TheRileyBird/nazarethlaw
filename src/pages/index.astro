@@ -25,16 +25,6 @@ import industrialImage from '../assets/images/industrial-image.jpg';
       </h1>
     </div>
 
-    <!-- Neil Image -->
-    <div class="absolute left-1/2 -translate-x-1/2 z-[5] bottom-0 md:top-28 md:bottom-auto w-full max-w-md md:max-w-xl lg:max-w-2xl h-[55vh] md:h-[65vh] lg:h-[70vh] flex items-end md:items-start justify-center">
-      <Image
-        src={transparentNeil}
-        alt="Neil Nazareth"
-        class="w-full h-full object-contain object-bottom md:object-top"
-        loading="eager"
-      />
-    </div>
-
     <!-- Content -->
     <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:flex md:flex-col md:justify-end md:min-h-[calc(100vh-5rem)] pb-8">
       <div class="max-w-5xl mx-auto text-center">
@@ -55,14 +45,34 @@ import industrialImage from '../assets/images/industrial-image.jpg';
           </CornerAccentCard>
         </div>
 
+        <!-- Neil Image - Mobile Only -->
+        <div class="md:hidden w-full max-w-md mx-auto h-[55vh] flex items-end justify-center mb-4">
+          <Image
+            src={transparentNeil}
+            alt="Neil Nazareth"
+            class="w-full h-full object-contain object-bottom"
+            loading="eager"
+          />
+        </div>
+
         <!-- CTA Buttons -->
-        <div class="flex items-center justify-center mt-[45vh] md:mt-0 mb-8">
+        <div class="flex items-center justify-center md:mt-0 mb-8">
           <Button href="#contact" variant="primary" size="lg" class="w-full sm:w-auto">
             <FileText class="w-5 h-5" />
             Free Consultation
           </Button>
         </div>
       </div>
+    </div>
+
+    <!-- Neil Image - Desktop Only -->
+    <div class="hidden md:block absolute left-1/2 -translate-x-1/2 z-[5] top-28 w-full max-w-xl lg:max-w-2xl h-[65vh] lg:h-[70vh]">
+      <Image
+        src={transparentNeil}
+        alt="Neil Nazareth"
+        class="w-full h-full object-contain object-top"
+        loading="eager"
+      />
     </div>
   </section>
 
