@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import { Phone, Mail, MapPin } from 'lucide-astro';
-import lightLogoSquare from '../assets/images/icon.png';
+import lightLogoSquare from '../assets/images/light-logo-icon.png';
 ---
 
 <style>
@@ -36,12 +36,11 @@ import lightLogoSquare from '../assets/images/icon.png';
   <div class="absolute inset-0 bg-pattern-diagonal opacity-5"></div>
 
   <!-- Gradient/Glow Background Effects -->
-  <div class="absolute top-0 left-0 w-[800px] h-[800px] bg-secondary-500/15 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
   <div class="absolute bottom-0 right-0 w-[900px] h-[900px] bg-primary-500/10 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
   <div class="absolute top-1/2 right-1/4 w-[600px] h-[600px] bg-secondary-400/8 rounded-full blur-3xl"></div>
 
   <!-- Large ghosted logo background -->
-  <div class="hidden lg:block absolute top-0 right-10 w-auto h-[500px] opacity-[0.09] pointer-events-none">
+  <div class="hidden lg:block absolute top-0 right-10 w-auto h-[500px] opacity-[0.04] pointer-events-none">
     <Image src={lightLogoSquare} alt="" class="w-full h-full overflow-hidden" />
   </div>
 
