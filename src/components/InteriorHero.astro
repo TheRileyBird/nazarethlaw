@@ -10,6 +10,14 @@ interface Props {
 const { title, description, heroImage } = Astro.props;
 ---
 
+<style>
+  .interior-hero-title {
+    font-size: clamp(2rem, 5vw, 3rem) !important; /* 32px to 48px */
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+</style>
+
 <section class="relative h-96 flex items-center justify-center overflow-hidden pt-20">
   {heroImage && (
     <div class="absolute inset-0">
@@ -30,7 +38,7 @@ const { title, description, heroImage } = Astro.props;
     <div class="inline-block mb-6" x-data x-intersect="$el.classList.add('animate')">
       <div class="h-1 w-24 bg-gradient-to-r from-primary-400 via-primary-300 to-transparent"></div>
     </div>
-    <h1 class="text-white mb-6 stagger-1" x-data x-intersect="$el.classList.add('animate')">
+    <h1 class="interior-hero-title text-white mb-6 stagger-1" x-data x-intersect="$el.classList.add('animate')">
       {title}
     </h1>
     <p class="text-xl sm:text-2xl text-white/90 max-w-3xl mx-auto leading-normal stagger-2" x-data x-intersect="$el.classList.add('animate')">
