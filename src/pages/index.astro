@@ -31,30 +31,38 @@ import saintsLogo from '../assets/images/saints-logo.png';
     <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 md:flex md:flex-col md:justify-end md:min-h-[calc(100vh-5rem)] pb-8">
       <div class="max-w-5xl mx-auto text-center">
 
-        <!-- Stats with sophisticated corner accents - Desktop Only -->
-        <div class="hidden md:grid grid-cols-1 sm:grid-cols-3 gap-8 mb-12 max-w-3xl mx-auto">
-          <CornerAccentCard accentColor="primary" class="bg-white/5 backdrop-blur-md rounded-none p-8 border border-white/30 hover-lift hover:bg-white/10 hover:border-primary-400/50 transition-all duration-500">
-            <div class="text-5xl font-light text-white mb-3 tracking-tight">$50M+</div>
-            <div class="text-sm text-gray-300 font-medium uppercase tracking-wider">Single Case Recoveries</div>
-          </CornerAccentCard>
-          <CornerAccentCard accentColor="secondary" class="bg-white/5 backdrop-blur-md rounded-none p-8 border border-white/30 hover-lift hover:bg-white/10 hover:border-secondary-400/50 transition-all duration-500">
-            <div class="text-5xl font-light text-white mb-3 tracking-tight">150+</div>
-            <div class="text-sm text-gray-300 font-medium uppercase tracking-wider">Cases Won</div>
-          </CornerAccentCard>
-          <CornerAccentCard accentColor="primary" class="bg-white/5 backdrop-blur-md rounded-none p-8 border border-white/30 hover-lift hover:bg-white/10 hover:border-primary-400/50 transition-all duration-500">
-            <div class="text-5xl font-light text-white mb-3 tracking-tight">20+</div>
-            <div class="text-sm text-gray-300 font-medium uppercase tracking-wider">Years of Experience</div>
-          </CornerAccentCard>
+        <!-- Practice Area Focus - Desktop Only -->
+        <div class="hidden md:grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
+          <a href="/practice-areas/asbestos-mesothelioma" class="block">
+            <CornerAccentCard accentColor="primary" class="bg-white/5 backdrop-blur-md rounded-none p-8 border border-white/30 hover-lift hover:bg-white/10 hover:border-primary-400/50 transition-all duration-500">
+              <div class="text-2xl font-bold text-white mb-2 text-center uppercase tracking-wider">Mesothelioma</div>
+              <div class="text-sm text-gray-300 leading-relaxed text-center">Asbestos exposure & workplace injuries</div>
+            </CornerAccentCard>
+          </a>
+          <a href="/practice-areas/maritime" class="block">
+            <CornerAccentCard accentColor="secondary" class="bg-white/5 backdrop-blur-md rounded-none p-8 border border-white/30 hover-lift hover:bg-white/10 hover:border-secondary-400/50 transition-all duration-500">
+              <div class="text-2xl font-bold text-white mb-2 text-center uppercase tracking-wider">Maritime Law</div>
+              <div class="text-sm text-gray-300 leading-relaxed text-center">Offshore & maritime accidents</div>
+            </CornerAccentCard>
+          </a>
         </div>
 
-        <!-- Neil Image - Mobile Only -->
-        <div class="md:hidden w-full max-w-md mx-auto h-[55vh] flex items-end justify-center mb-4">
-          <Image
-            src={transparentNeil}
-            alt="Neil Nazareth"
-            class="w-full h-full object-contain object-bottom"
-            loading="eager"
-          />
+        <!-- Mobile Hero Content -->
+        <div class="md:hidden relative w-full">
+          <!-- Practice Areas Text - In Front of Neil -->
+          <div class="absolute inset-0 flex items-end justify-center px-4 pb-5 z-[11]">
+            <p class="text-white text-3xl font-extrabold uppercase tracking-widest text-center drop-shadow-[0_4px_8px_rgba(0,0,0,0.8)]" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9), -1px -1px 2px rgba(0,0,0,0.5);">Mesothelioma<br/>& Maritime Law</p>
+          </div>
+
+          <!-- Neil Image -->
+          <div class="relative z-10 w-full max-w-md mx-auto h-[55vh] flex items-end justify-center">
+            <Image
+              src={transparentNeil}
+              alt="Neil Nazareth"
+              class="w-full h-full object-contain object-bottom"
+              loading="eager"
+            />
+          </div>
         </div>
 
         <!-- CTA Buttons -->
@@ -102,7 +110,7 @@ import saintsLogo from '../assets/images/saints-logo.png';
 
           <div class="space-y-6 text-lg text-gray-700 leading-normal mb-10 stagger-3" x-data x-intersect="$el.classList.add('animate')">
             <p>
-              With over two decades of experience, Neil F. Nazareth has dedicated his career to representing victims of major industrial disasters and environmental exposures.
+              With over two decades of experience, Neil F. Nazareth has dedicated his career to representing victims of mesothelioma and maritime accidents.
             </p>
             <p>
               Recognized annually as a Louisiana Super Lawyer since 2013, Neil has secured over $50 million in compensation for individual clients in complex asbestos and maritime litigation cases.
