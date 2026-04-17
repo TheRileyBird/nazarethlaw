@@ -73,9 +73,14 @@ function getGradientClasses(from: string, to: string): string {
   <section class="py-20 bg-gradient-to-b from-gray-100 to-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {sortedPosts.map((post) => {
+        {sortedPosts.map((post, index) => {
           const categoryClasses = getCategoryClasses(post.data.category);
-          const gradientClass = getGradientClasses(post.data.gradientFrom, post.data.gradientTo);
+          const patternGradients = [
+            'bg-gradient-to-br from-primary-600 to-primary-800',
+            'bg-gradient-to-br from-secondary-300 to-secondary-600',
+            'bg-gradient-to-br from-accent-500 to-accent-700',
+          ];
+          const gradientClass = patternGradients[index % 3];
           const label = post.data.category === 'Firm News' ? '' : 'Settlement';
 
           return (
