@@ -5,6 +5,7 @@ import alpinejs from '@astrojs/alpinejs';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://nazarethlawfirm.com',
   integrations: [
     alpinejs({
       entrypoint: './src/alpine-config.js'
